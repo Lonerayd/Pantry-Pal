@@ -4,7 +4,9 @@
     box-sizing: border-box;
   }
   
- 
+ header{
+  position: fixed;
+ }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -69,10 +71,11 @@
         width: 100px;
     }
   }
-  .background {
+  .p1 {
     background-image: url(images/logoImages/Group\ 1.png);
-    
-}
+    height: 100svh;
+    }
+  
 .metaTag {
     display: flex;
     justify-content: center;
@@ -81,7 +84,7 @@
     text-align: center;
     color: aliceblue;
     font-size: 2rem;
-    margin-top: 50px;
+    padding-top: 100px;
     margin-bottom: 50px;
     flex-wrap: nowrap;
     /* width: 250px; */
