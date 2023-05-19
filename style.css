@@ -4,78 +4,99 @@
     box-sizing: border-box;
   }
   
- header{
-  position: fixed;
- }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
+ 
   
-  .navbar ul {
+  
+  .nav-links {
     display: flex;
     list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    height: 100%;
+    
   }
   
-  .navbar .logo {
-    max-width: 100px;
-    height: auto;
-  }
   
-
-  ul li {
-    padding: 20px;
-    color: aliceblue;
-    font-size: 2rem;
-  }
-  ul {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+  
+.logo{
+  height: 100%;
+  background-color: #F7EDD0;
+  border-radius: 50%;
  
+}
+.logo img{
+  height: 100%;
+  background-color: #F7EDD0;
+  border-radius: 50%;
+  padding: 5px;
+}
+  ul li {
+   
+    color: inherit;
+    font-size: inherit;
+    text-align: center;
+  }
+  
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    min-height: 50px;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+    display: flex;
+   justify-content: space-between;
+  align-items: center;
+   color: aliceblue;
+   font-size: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  nav.scrolled {
+    background-color: #F7EDD0;
+    height: 60px;
+    transition: 0.3 ease-in-out;
+    color: black;
+  }
+ .burger
+ {
+  display: none;
+ }
+ .burger i{
+    cursor: pointer;
+ }
+  
+  
+  @media (max-width: 1024px){
+    nav {
+      font-size: 1.5rem;
+    }
+  }
+
   @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    .nav-links {
+     display: none;
     }
-  
-    .navbar ul {
-      flex-direction: column;
-      margin-top: 10px;
+    .burger {
+      display: block;
+      padding-left: 20px;
     }
-  
-    .navbar ul li {
-      margin-right: 0;
-      margin-bottom: 5px;
-    }
-  
-    .navbar ul.left-items,
-    .navbar ul.right-items {
-      margin: 0;
-    }
-  
-    .navbar button {
-      margin-top: 10px;
-    }
-    ul li {
-        padding: 0;
-    }
-    .toClickBtnLeft {
-        width: 100px;
-        margin-right: 0;
-    }
-    .toClickBtnRight {
-        width: 100px;
-    }
+
+    
+
   }
   .p1 {
     background-image: url(images/logoImages/Group\ 1.png);
     height: 100svh;
     }
-  
+  .p2 {
+    height: 100vh;
+  }
 .metaTag {
     display: flex;
     justify-content: center;
@@ -84,7 +105,7 @@
     text-align: center;
     color: aliceblue;
     font-size: 2rem;
-    padding-top: 100px;
+    height: 100%;
     margin-bottom: 50px;
     flex-wrap: nowrap;
     /* width: 250px; */
@@ -95,7 +116,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    padding-bottom: 250px;
+    
 }
 .toClickBtnLeft {
     margin-right: 250px;
