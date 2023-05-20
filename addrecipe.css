@@ -1,0 +1,252 @@
+
+/* SIDEBAR */
+form{
+    text-align: left;
+    padding-left: 8px;
+}
+form label{
+    font-weight: 500;
+}
+form input{
+    height: 38px;
+    border-radius: 10px;
+    border-style: none;
+    border: 1px solid grey;
+}
+.log-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-success{
+    padding: 5px;
+}
+.welcome{
+    font-size: 25px;
+}
+
+
+
+/* CONTENT */
+
+/* NAVBAR */
+.d-flex{
+    gap: 10px;
+}
+.search-bar{
+    width: 350px;
+    border-radius: 20px;
+    height: 30px;
+}
+.search-button{
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.btn{
+    margin-right: 40px;
+}
+.small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+.icon{
+    height: 25px;
+    width: 25px;
+}
+hr{
+    margin: 0;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    color: red;
+}
+.parent div{
+    padding-top: 10px;
+}
+
+
+
+/* BOTTOM(under nav) */
+.bottom{
+    background-color: rgb(240, 240, 240);
+}
+
+
+
+/* CARDS */
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.top-card, .bot-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 5px;
+}
+.bot-card{
+    margin-top: 10px;
+}
+.card{
+    border-radius: 15px;
+    width: 18rem;
+}
+.card-img-top{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.card-body{
+    height: 65px;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* small */
+@media only screen and (max-width: 600px) {
+    /* SIDEBAR */
+form{
+    text-align: center;
+    padding-left: 8px;
+}
+form label{
+    font-weight: 500;
+}
+form input{
+    height: 38px;
+    border-radius: 10px;
+    border-style: none;
+    border: 1px solid grey;
+}
+#email{
+    margin-left: 24px;
+}
+.log-btn{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.btn-success{
+    padding: 5px;
+}
+.welcome{
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+/* CONTENT */
+
+/* NAVBAR */
+.navbar{
+    padding-top: 50px;
+}
+.d-flex{
+    gap: 10px;
+}
+.search-bar{
+    width: 180px;
+    border-radius: 20px;
+    height: 30px;
+}
+.search-button{
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.btn{
+    margin-right: 10px;
+}
+.small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.icon{
+    height: 25px;
+    width: 25px;
+}
+hr{
+    margin: 0;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    color: red;
+}
+.parent div{
+    padding-top: 10px;
+}
+
+
+
+/* BOTTOM */
+.bottom{
+    background-color: rgb(240, 240, 240);
+}
+
+
+
+/* CARDS */
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.top-card, .bot-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5px;
+}
+.bot-card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card{
+    border-radius: 15px;
+    width: 18rem;
+}
+.card-img-top{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.card-body{
+    height: 65px;
+}
+
+}
+
+
+
+
