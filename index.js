@@ -1,13 +1,33 @@
-var luzon = document.getElementById("luzon");
-var visayas = document.getElementById("visayas");
-var mindanao = document.getElementById("mindanao");
+var luzonButton = document.getElementById("luzonButton");
+var visayasButton = document.getElementById("visayasButton");
+var mindanaoButton = document.getElementById("mindanaoButton");
 
-function disappear1() {
-  luzon.classList.toggle("visib");
+var luzonSection = document.getElementById("luzon");
+var visayasSection = document.getElementById("visayas");
+var mindanaoSection = document.getElementById("mindanao");
+
+function showSection(section) {
+  section.classList.remove("none");
 }
-function disappear2() {
-  visayas.classList.toggle("visib");
+
+function hideSection(section) {
+  section.classList.add("none");
 }
-function disappear3() {
-  mindanao.classList.toggle("visib");
-}
+window.onload=showSection(luzonSection);
+luzonButton.addEventListener("click", function() {
+  showSection(luzonSection);
+  hideSection(visayasSection);
+  hideSection(mindanaoSection);
+});
+
+visayasButton.addEventListener("click", function() {
+  hideSection(luzonSection);
+  showSection(visayasSection);
+  hideSection(mindanaoSection);
+});
+
+mindanaoButton.addEventListener("click", function() {
+  hideSection(luzonSection);
+  hideSection(visayasSection);
+  showSection(mindanaoSection);
+});
