@@ -154,7 +154,11 @@ form input{
     text-align: center;
 }
 
-
+/* .logInCenter {
+    display: grid;
+    align-items: center !important;
+    justify-content: center !important;
+} */
 
 /* CONTENT */
 
@@ -246,7 +250,5 @@ span{
 }
 
 }
-
-
 
 
