@@ -7,15 +7,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#icon').click(function () {
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
-    <nav>
-        <div class="burger">
+    <nav class="storyLine">
+        <div class="burger" id="icon">
             <i class="fa-solid fa-bars"></i>
-            <div class="menu">
-                
-            </div>
         </div>
         <ul class="nav-links">
             <li>Home</li>
@@ -28,29 +33,26 @@
         </ul>
       </nav>
     </header>
-    <main>
-        <div>
-            <h1>Our Story</h1>
+    <main class="bgImage">
+        <div class="storyHeading">
+            <div class="ourStoryHeading">
+                <h1 class="ourStory">Our Story</h1>
+            </div>
+            <div class="storyPage">
+                <p>The story of Pantry Pal began with a group of friends who recognized the need for a platform where people could come together, virtually, to celebrate the culinary heritage of the Philippines. With a vision to bridge the gap between cultures and connect individuals through the love of food, they embarked on an exciting journey to create a digital haven for recipe-sharing. </br> </br>
+
+                    As Pantry Pal flourished, its community grew exponentially. Home cooks, professional chefs, and everyone in between united under one virtual roof to exchange culinary wisdom, share beloved family recipes, and embark on gastronomic adventures. The website became a treasure trove of culinary knowledge, where traditional Filipino dishes were meticulously documented, celebrated, and given new life.
+                    Pantry Pal's success lay in its commitment to authenticity and inclusivity. While traditional recipes like adobo, sinigang, and lechon took center stage, regional specialties and lesser-known delicacies from Luzon, Visayas, and Mindanao were equally cherished. The platform became a melting pot of flavors, where Filipino culture was beautifully represented through the diversity of its culinary traditions.
+                    To ensure a seamless user experience, Pantry Pal's website featured an intuitive interface where users could easily navigate through various categories, such as breakfast delights, savory snacks, festive feasts, and delectable desserts. Members could contribute their own recipes, accompanied by vibrant photos and detailed instructions, allowing others to recreate these culinary delights in their own kitchens.
+                    But Pantry Pal was not merely a recipe-sharing website; it fostered a sense of community and camaraderie among its users. Discussion forums, comment sections, and private messaging options encouraged interaction, enabling users to exchange tips, share personal anecdotes, and connect with fellow food enthusiasts. The website also featured a blog section, where aspiring food writers could showcase their talent and explore the stories behind the recipes. </br></br>
+                    
+                    As Pantry Pal continued to grow, it ventured beyond the virtual realm. The team organized exciting events such as cooking workshops, pop-up markets, and even culinary tours across the Philippines. These endeavors aimed to bring the essence of Pantry Pal to life, allowing members to forge genuine connections and experience the flavors of the archipelago firsthand. </br></br>
+                    
+                    With each passing day, Pantry Pal became a testament to the power of food in transcending cultural barriers and bringing people together. It celebrated the Filipino spirit, capturing the essence of fiestas, family gatherings, and the shared joy of breaking bread. Through its platform, Pantry Pal nurtured a sense of pride in Filipino cuisine, encouraging individuals worldwide to embrace and explore its unique flavors.
+                    Today, Pantry Pal stands as an emblem of Filipino culinary heritage, inspiring a new generation to savor the distinct tastes and vibrant colors of the archipelago. Its website continues to be a haven for culinary enthusiasts seeking to connect, learn, and share their love for Filipino food. As Pantry Pal expands its reach, it invites everyone to join its ever-growing family, where taste buds dance, flavors unite, and stories unfold, one recipe at a time.</p>
+            </div>
         </div>
-        <div>
-            <p>Filipino food history is rich and diverse, with influences from various cultures and regions. Luzon, Visayas, and Mindanao are the three main geographical regions of the Philippines, and each has its unique culinary traditions. Here's an overview of the food history from each region:
-                Luzon:</p>
-            <li>Pre-colonial Era: Before the arrival of the Spaniards, Luzon's cuisine consisted of indigenous ingredients like rice, root crops, fish, and game meats. Fermentation techniques were used to preserve food.</li>
-            <li>Spanish Influence: The Spanish colonization greatly influenced Luzon's food. Spanish ingredients such as tomatoes, garlic, onions, and various spices were introduced. Iconic dishes like adobo (meat marinated in vinegar and soy sauce) and cocido (stew) have Spanish roots.</li>
-            <li>Chinese Influence: The Chinese traders and immigrants brought their culinary traditions, such as stir-frying techniques and noodles. Pancit (noodles) and lumpia (spring rolls) are popular examples of Chinese-influenced dishes.</li>
-            <li>Regional Specialties: Luzon has diverse regional specialties. Pampanga is known for its rich and flavorful dishes like sisig (chopped pork face and liver) and bringhe (a variation of paella). Ilocos region is famous for its bagnet (deep-fried crispy pork) and empanada (stuffed pastry).</li>
-            <p>Visayas:</p>
-            <li>Indigenous Cuisine: The Visayan islands have a rich history of indigenous culinary traditions. Seafood, coconut, and root crops like cassava and taro are commonly used ingredients. The Visayans have traditional cooking methods such as inun-unan (fish cooked in vinegar) and binakol (chicken soup cooked with coconut water).</li>
-            <li>Spanish Influence: Like Luzon, the Spanish colonization influenced Visayan cuisine. Dishes like lechon (roast pig) and estofado (stewed meat) were introduced and became popular.</li>
-            <li>Festive Delicacies: Visayas is known for its festive delicacies. In Cebu, lechon is especially famous, often considered one of the best in the country. In Negros Occidental, chicken inasal (grilled chicken marinated in local spices) is a favorite dish.</li>
-            <li>Seafood Delights: Given its island geography, Visayas offers an abundance of fresh seafood dishes. Kinilaw (ceviche) and sinuglaw (grilled pork and fish ceviche) are popular seafood preparations.</li>
-            <p>Mindanao:</p>
-            <li>Indigenous Muslim Cuisine: Mindanao is home to various indigenous Muslim communities, and their cuisine reflects their cultural traditions. Dishes like piaparan (chicken cooked in turmeric) and tiyula itum (black soup made with burnt coconut) are unique to Mindanao.</li>
-            <li>Malay Influence: Mindanao has a strong Malay influence, seen in dishes like lansiao (beef soup with ginger) and pastil (rice topped with shredded chicken or beef).</li>
-            <li>Fruit and Spices: Mindanao's tropical climate allows for the cultivation of fruits like durian, pomelo, and mangosteen. Spices such as turmeric, ginger, and chili peppers are commonly used in their dishes.</li>
-            <li>Fusion Cuisine: Mindanao's proximity to other Southeast Asian countries and its history of trade has led to a fusion of culinary influences. Dishes like beef rendang (spicy Indonesian beef stew) and satay (grilled skewered meat) can be found in Mindanao.</li>
-            <p>It's important to note that this overview provides a general perspective, and there are countless more dishes and culinary traditions within each region. Filipino food history is incredibly diverse, reflecting the country's complex history.</p>
-        </div>
+        
     </main>
     <script>
         window.addEventListener("scroll", function() {
