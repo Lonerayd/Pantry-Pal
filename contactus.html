@@ -10,14 +10,13 @@
       .contactUsBody{
         background-image: url(images/logoImages/backgroundimg.png);
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
+        background-size: auto;
       }
       h1{
         text-align: center;
       }
       table{
-        margin:5% auto;
+        margin:4% auto;
         background-color: #F7EDD0;
         padding: 25px;
         border-radius: 20px;
@@ -31,6 +30,10 @@
         border-radius: 20px;
         border-style: none;
         color: #F9F9F7;
+        opacity:.8;
+      }
+      .submitbtn:hover{
+        opacity:1;
       }
       input, textarea {
         border-radius: 5px;
@@ -39,47 +42,47 @@
 </head>
 <body class="contactUsBody">
   <h1>Contact Us</h1>
-  
-  <form>
-    <table>
-      <tr>
-        <th><label for="firstname">First Name*</label></th>
-        <th><label for="lastname">Last Name*</label></th>
-      </tr>
-      <tr>
-        <td><input type="text" name="firstname"></td>
-        <td><input type="text" name="lastname"></td>
-      </tr>
-      <tr>
-        <th><label for="email">Email*</label></th>
-        <th><label for="phoneNumber">Phone Number*</label></th>
-      </tr>
-      <tr>
-        <td><input type="email" name="email"></td>
-        <td><input type="number" name="phoneNumber"></td>
-      </tr>
-      <tr>
-        <th><label for="address">Address*</label></th>
-        <th><label for="postalCode">Postal Code*</label></th>
-      </tr>
-      <tr>
-        <td><input type="text" name="address"></td>
-        <td><input type="number" name="postalCode"></td>
-      </tr>
-      <tr>
-        <th><label for="message">Message*</label></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td rowspan="2" colspan="2"><textarea name="message" rows="4" cols="45"></textarea></td>
-      </tr>
-      <tr></tr>
-      <tr>
-        <td rowspan="2" colspan="2" style="text-align: center;"><button class="submitbtn">Submit</button></td>
-      </tr>
-    </table>
-    
-  </form>
-    <script></script>
+  <div style="overflow-x:auto;">
+    <form>
+      <table>
+        <tr>
+          <th><label for="firstname">First Name*</label></th>
+          <th><label for="lastname">Last Name*</label></th>
+        </tr>
+        <tr>
+          <td><input type="text" name="firstname"></td>
+          <td><input type="text" name="lastname"></td>
+        </tr>
+        <tr>
+          <th><label for="email">Email*</label></th>
+          <th><label for="phoneNumber">Phone Number*</label></th>
+        </tr>
+        <tr>
+          <td><input type="email" name="email"></td>
+          <td><input type="number" name="phoneNumber"></td>
+        </tr>
+        <tr>
+          <th><label for="address">Address*</label></th>
+          <th><label for="postalCode">Postal Code*</label></th>
+        </tr>
+        <tr>
+          <td><input type="text" name="address"></td>
+          <td><input type="number" name="postalCode"></td>
+        </tr>
+        <tr>
+          <th><label for="message">Message*</label></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="2"><textarea name="message" rows="4" cols="45"></textarea></td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td rowspan="2" colspan="2" style="text-align: center;"><button class="submitbtn">Submit</button></td>
+        </tr>
+      </table>
+      
+    </form>
+  </div>
 </body>
 </html>
