@@ -131,7 +131,8 @@
      left: -100%;
      text-align: center;
      flex-direction: column;
-     
+     justify-content: start;
+     gap: 20px;
      transition: all .5s;
     }
     .nav-links.show {
