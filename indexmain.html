@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesample.css">
+ 
   <title>Document</title>
   <style>
     h1{
@@ -14,6 +15,8 @@
     .categories{
       display: flex;
       justify-content: space-evenly;
+      width: 100%;
+      
     }
     .cat1{
       background-image: url(images/luzonImages/L-pancitbatil.png);
@@ -55,6 +58,8 @@
     .imgStyle{
       width:200px;
       height:200px;
+      border-radius: 20px;
+     
     }
 
 
@@ -62,30 +67,69 @@
 
     .none{
     display: none;
+     
+    
     }
+    
     .visib{
     display: block;
+    
+    
     }
+    .p2{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-image: url("images/logoImages/p2bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .foodsec{
+      width: 100%;
+      animation: mymove 0.7s 1;
+     
+    }
+
+    .foodsec h1{
+      padding-bottom: 40px ;
+     
+    }
+    @keyframes mymove {
+  from {
+    opacity: 0;
+    /* transform: translateX(-100%); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(0); */
+  }
+}
+  
+    
 
   </style>
 </head>
 <body>
   <main>
-    <h1>Choose from a variety of recipes from different parts of the country</h1>
+    <div class="p2">
+      <h1>Choose from a variety of recipes from different parts of the country</h1>
 
     <div class="categories">
-      <button class="cat1 border" onclick="disappear1()">
+      <button class="cat1 border"  id="luzonButton">
         Luzon
       </button>
-      <button class="cat2 border" onclick="disappear2()">
+      <button class="cat2 border"  id="visayasButton">
         Visayas
       </button>
-      <button class="cat3 border" onclick="disappear3()">
+      <button class="cat3 border"  id="mindanaoButton">
         Mindanao
       </button>
     </div>
-  </main>
-  <section class="none" id="luzon">
+  
+  <section class="none foodsec " id="luzon" >
     <h1>Luzon</h1>
     <article class="categories">
       <div class="food1L">
@@ -110,7 +154,7 @@
       </div>
     </article>
   </section>
-  <section class="none" id="visayas">
+  <section class="none foodsec" id="visayas">
     <h1>Visayas</h1>
     <article class="categories">
       <div class="food1V">
@@ -135,7 +179,7 @@
       </div>
     </article>
   </section>
-  <section class="none" id="mindanao">
+  <section class="none foodsec" id="mindanao" >
     <h1>Mindanao</h1>
     <article class="categories">
       <div class="food1M">
@@ -160,6 +204,9 @@
       </div>
     </article>
   </section>
+    </div>
+  </main>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>

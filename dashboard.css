@@ -1,0 +1,208 @@
+
+/* SIDEBAR */
+form{
+  text-align: left;
+  padding-left: 8px;
+}
+form label{
+  font-weight: 500;
+}
+form input{
+  height: 38px;
+  border-radius: 10px;
+  border-style: none;
+  border: 1px solid #A1AFA0;
+}
+.log-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-success{
+  padding: 5px;
+}
+.welcome{
+  font-size: 25px;
+}
+
+/* CONTENT */
+
+/* NAVBAR */
+.d-flex{
+  gap: 10px;
+}
+.search-bar{
+  width: 350px;
+  border-radius: 20px;
+  height: 30px;
+}
+.search-button{
+  border-radius: 20px;
+  height: 30px;
+  padding: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.btn{
+  margin-right: 40px;
+}
+.small{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+.icon{
+  height: 25px;
+  width: 25px;
+}
+hr{
+  margin: 0;
+}
+.parent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+span{
+  color: #970C10;
+}
+.parent div{
+  padding-top: 10px;
+}
+
+
+/* data */
+.iconBox{
+  display: flex;
+  justify-content: space-between;
+}
+.data{
+  padding:10px;
+  background-color: #F7EDD0;
+  margin-top: 2%;
+  border:1px solid #A1AFA0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+/* recently added, meal plans, reviews */
+.marginRecent{
+  margin-top: 3%;
+  min-height: 500px;
+}
+
+.smallImg{
+  width:70px;
+  height:70px;
+  border-radius:5px;
+
+}
+
+.recipe-body{
+  display: flex;
+  justify-content: left;
+  padding:10px;
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+.recipe-body p{
+  padding: 10px;
+  margin-left: 2%;
+  min-width: auto;
+}
+.recipe-header{
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+  align-content: center;
+}
+.recipe-header a{
+  align-self: center;
+  font-size: smaller;
+  color: #970C10;
+}
+.refresh{
+  border: #A1AFA0 1px solid;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: smaller;
+  padding:5px;
+  align-self: center;
+  color: #970C10;
+}
+.recipe-border{
+  border: #A1AFA0 1px solid;
+  background-color: transparent;
+  border-radius: 5px;
+  padding:5px;
+  margin: 1%;
+  box-shadow: 5px 5px 5px black;
+}
+
+/* media query */
+@media only screen and (max-width: 600px) {
+  /* CONTENT */
+  .iconBox{
+    display: none;
+  }
+  .recipe-body{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .recipe-header{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    padding-top: 50px;
+  }
+  .d-flex{
+    gap: 10px;
+  }
+  .search-bar{
+    width: 180px;
+    border-radius: 20px;
+    height: 30px;
+  }
+  .search-button{
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .btn{
+    margin-right: 10px;
+  }
+  .small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .icon{
+    height: 25px;
+    width: 25px;
+  }
+  hr{
+    margin: 0;
+  }
+  .parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  span{
+    color: red;
+  }
+  .parent div{
+    padding-top: 10px;
+  }
+}
