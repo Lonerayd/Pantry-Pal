@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Premium</title>
+    <style>
+        *{
+            margin: 0;
+
+        }
+        .parent{
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+            background-color: #970C10;
+            height: 640px;
+            display: flex;
+            justify-content: left;
+            font-size: 18px;
+        }
+        .bg{
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 47%, 0% 0%);
+           
+        }
+        .left{
+            position: absolute;
+            top: 180px;
+            left: 160px;
+            width: 50%;
+            display: flex;
+            gap: 50px;
+        }
+        .meal-header{
+            position: absolute;
+            top: 120px;
+            left: 83px;
+        }
+        .plan{
+            border-radius: 20px;
+            border:  3px solid #970C10;
+        }
+        .line{
+            position: absolute;
+            top: 260px;
+            left: 400px;
+        }
+        .red{
+            padding-left: 20px;
+            padding-top: 230px;
+            color: white;
+            font-size: 19px;
+            text-align: center;
+        }
+        span{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        input{
+            border-style: none;
+            height: 28px;
+            border-radius: 7px;
+            font-size: 15px;
+            width: 270px
+        }
+        button{
+            margin-left: 35px;
+            text-align: center;
+            border-radius: 10px;
+            border-style: none;
+            padding: 9px;
+            color: white;
+            font-size: 15px;
+            background-color: #970C10;
+            border: 2px solid #F7EDD0;
+        }
+        button:hover{
+            color: black;
+            background-color: #F7EDD0;
+        }
+
+
+
+
+        /* SMALL MEDIA QUERY */
+        @media only screen and (max-width: 600px){
+        *{
+            margin: 0;
+
+        }
+        .parent{
+            display: flex;
+            gap: 20px;
+        }
+        .right{
+            width: 100%;
+            background-color: #970C10;
+            height: 640px;
+            display: flex;
+            justify-content: left;
+            font-size: 18px;
+        }
+        .bg{
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 47%, 0% 0%);
+           
+        }
+        .left{
+            position: absolute;
+            top: 200px;
+            left: 40px;
+            width: 50%;
+            display: flex;
+            gap: 50px;
+        }
+        .meal-header{
+            position: absolute;
+            top: 120px;
+            left: 100px;
+        }
+        .plan{
+            border-radius: 20px;
+            border:  3px solid #970C10;
+        }
+        .line{
+            position: absolute;
+            top: 260px;
+            left: 400px;
+        }
+        .red{
+            padding-left: 8px;
+            padding-top: 230px;
+            color: black;
+            font-size: 19px;
+            text-align: center;
+            position: absolute;
+            top: 420px;
+        }
+        span{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        input{
+            border-style: none;
+            height: 28px;
+            border-radius: 7px;
+            font-size: 15px;
+            width: 270px;
+            border: 2px solid #970C10;
+        }
+        button{
+            text-align: center;
+            border-radius: 10px;
+            border-style: none;
+            padding: 9px;
+            color: white;
+            font-size: 15px;
+            background-color: #970C10;
+            border: 2px solid #F7EDD0;
+        }
+        button:hover{
+            color: black;
+            background-color: #F7EDD0;
+        }
+        }
+
+
+        
+
+
+        /*  MEDIUM MEDIA QUERY */
+        @media only screen and (max-width: 1024px){
+            *{
+            margin: 0;
+
+        }
+        .parent{
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+            background-color: #970C10;
+            height: 640px;
+            display: flex;
+            justify-content: left;
+            font-size: 18px;
+        }
+        .bg{
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 47%, 0% 0%);
+           
+        }
+        .left{
+            position: absolute;
+            top: 180px;
+            left: 50px;
+            width: 50%;
+            display: flex;
+            gap: 50px;
+        }
+        .meal-header{
+            position: absolute;
+            top: 120px;
+            left: 10px;
+        }
+        .plan{
+            border-radius: 20px;
+            border:  3px solid #970C10;
+        }
+        .line{
+            position: absolute;
+            top: 260px;
+            left: 400px;
+        }
+        .red{
+            padding-right: 10px;
+            padding-top: 230px;
+            color: white;
+            font-size: 19px;
+            text-align: center;
+        }
+        span{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        input{
+            border-style: none;
+            height: 28px;
+            border-radius: 7px;
+            font-size: 15px;
+            width: 270px
+        }
+        button{
+            margin-left: 35px;
+            text-align: center;
+            border-radius: 10px;
+            border-style: none;
+            padding: 9px;
+            color: white;
+            font-size: 15px;
+            background-color: #970C10;
+            border: 2px solid #F7EDD0;
+        }
+        button:hover{
+            color: black;
+            background-color: #F7EDD0;
+        }
+        }
+    </style>
+</head>
+<body>
+   <div class="parent">
+    <div class="right">
+        <img src="https://color-hex.org/colors/f7edd0.png" alt="" width="55%" height="640px" class="bg">
+        <h1 class="meal-header">Meal Planner</h1>
+        <p class="left">
+            <img src="images/meal-plan.png" alt="" height="300px" width="300px" class="plan">
+        </p>
+        <p class="red">
+            <span>Premium Plan worth $5.99 per month!</span><br>
+            <br>
+            Get a premium subscription to gain access on our meal planner!<br>
+                Easy to use ◈
+                Organized List ◈
+                Budget-wise ◈
+                Personalized<br>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Type your email" required><br>
+            <br>
+            <button><b>Get Premium</b></button>
+        </p>
+        
+    </div>
+   </div>
+
+</body>
+</html>

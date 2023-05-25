@@ -84,6 +84,7 @@ span{
   margin-top: 2%;
   border:1px solid #A1AFA0;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 /* recently added, meal plans, reviews */
@@ -138,4 +139,70 @@ span{
   border-radius: 5px;
   padding:5px;
   margin: 1%;
+  box-shadow: 5px 5px 5px black;
+}
+
+/* media query */
+@media only screen and (max-width: 600px) {
+  /* CONTENT */
+  .iconBox{
+    display: none;
+  }
+  .recipe-body{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .recipe-header{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    padding-top: 50px;
+  }
+  .d-flex{
+    gap: 10px;
+  }
+  .search-bar{
+    width: 180px;
+    border-radius: 20px;
+    height: 30px;
+  }
+  .search-button{
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .btn{
+    margin-right: 10px;
+  }
+  .small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .icon{
+    height: 25px;
+    width: 25px;
+  }
+  hr{
+    margin: 0;
+  }
+  .parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  span{
+    color: red;
+  }
+  .parent div{
+    padding-top: 10px;
+  }
 }
