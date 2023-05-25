@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="addrecipe.css">
-    <title>Document</title>
+    <title>Add Recipe</title>
 </head>
 
 
@@ -14,47 +15,52 @@
 
 
 <body>
-    <div class="container-fluid">
-      <!-- SIDEBAR -->
-        <div class="row">
-          <div class="col-lg-2 col-md-12 col-sm-2 left text-center">
-            <br>
-            <br>
-           <p class="welcome">
-            <span>Welcome</span> Back!<br>
-           </p>
-           <p class="sentence">Log in to get started</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <form>
-              <label for="email">Email:</label>
-              <input type="email" name="email" id="email" placeholder="Type your email" required><br>
-              <br>
-              <label for="password">Password:</label>
-              <input type="password" name="password" placeholder="Type your password" required><br>
-              <br>
-             <div class="log-btn">
-              <button type="button" class="btn btn-danger">Log in</button>
-              <br>
-              <br>
-             </div>
-            </form>
-          </div>
-
+    <div class="container-fluid first">
 
           <!-- CONTENT -->
-          <div class="col-lg-10 right">
+          <div class="col-lg-12 right">
             <nav class="navbar">
-                <div class="container-fluid">
-                  <a class="navbar-brand"></a>
+                <div class="container-fluid navs">
+                  <!-- <a class="navbar-brand"></a> -->
+                  <div>
+                    <div class="navbar-toggle">
+                      <div class="bar"></div>
+                      <div class="bar"></div>
+                      <div class="bar"></div>
+                    </div>
+                    <div class="navbar-logo">
+                      <!-- Your logo or brand name goes here -->
+                    </div>
+                    <div class="sidebar-overlay"></div>
+                    <div class="sidebar">
+                      <div class="sidebar-header">
+                        <div class="sidebar-toggle">
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                        </div>
+                        <div class="sidebar-logo">
+                          <!-- Your logo or brand name goes here -->
+                        </div>
+                      </div>
+                      <ul class="sidebar-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">My recipes</a></li>
+                        <li><a href="#">Saved recipes</a></li>
+                        <li><a href="#">Meal planner</a></li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+
+
+
+
                   <form class="d-flex" role="search">
                     <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
                     <button type="button" class="btn btn-outline-danger search-button" type="submit">Search</button>
                     <div class="small">
-                        <img src="https://cdn-icons-png.flaticon.com/512/726/726596.png?w=360&t=st=1684401210~exp=1684401810~hmac=0ca213ea395a3ced218a01bbc9bdda6d98c8114326d7fb7045b1afc9407f9204" alt="" class="icon">
-                        <img src="/images/logoImages/pngwing.com-removebg-preview.png" alt="" class="icon">
+                      <i class="fa-solid fa-user fa-xl" style="color: #970c10;"></i>
                     </div>
                   </form>
                 </div>
@@ -67,7 +73,6 @@
                   <p>8 recipes</p>
                 </div>
                 <div class="filter-button">
-                  <button type="button" class="btn btn-outline-danger search-button" type="submit">Filter</button>
                   <button type="button" class="btn btn-outline-danger search-button" type="submit">+ Add Recipes</button>
                 </div>
             </div>
@@ -140,10 +145,10 @@
                   </div>
                   <!-- CARD 7 -->
                   <div class="card">
-                    <img src="https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1501428921/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1637868035671.jpg" class="card-img-top" alt="...">
+                    <img src="https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1458087071/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1637868215411.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">
-                        <strong>Pancit Sisig</strong>  
+                        <strong>Salmon Belly Sinigang with Miso</strong>  
                       </p>
                     </div>
                   </div>
@@ -165,5 +170,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="addrecipe.js"></script>
 </body>
 </html>
