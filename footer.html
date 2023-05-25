@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ---------- footer ---------- */
+    .bg_footer{
+      padding-top: 40px;
+      background-color: #F7EDD0;
+    }
+
+    /* container2 */
+
+    .container2{
+      display: flex;
+      flex-direction: column;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .sec_1{
+      flex-basis: 50%;
+    }
+    .sec_2{
+      flex-basis: 50%;
+      padding: 20px;
+    }
+
+    /* links container */
+
+    .links_container{
+      display: flex;
+    }
+
+    .link_1{
+      flex-basis: 25%;
+      padding: 20px;
+    }
+    .link_2{
+      flex-basis: 25%;
+      padding: 20px;
+    }
+    .link_3{
+      flex-basis: 25%;
+      padding: 20px;
+    }
+    .link_4{
+      flex-basis: 25%;
+      padding: 20px;
+      text-align: right;
+    }
+    .text2{
+      font-family: 'Mulish', sans-serif;
+      font-size: 14px;
+      color: #970C10;
+      text-decoration: none;
+    }
+    .text3{
+      font-family: 'Mulish', sans-serif;
+      font-size: 14px;
+      font-weight: lighter;
+      color: #970C10;
+      text-decoration: none;
+    }
+    .text4{
+      font-family: 'Mulish', sans-serif;
+      font-size: 12px;
+      color: #970C10;
+      text-decoration: none;
+      font-weight: lighter;
+    }
+    /* ---------- end of footer ---------- */
+    /* media query */
+
+    @media (max-width: 1200px) 
+    {
+      .links_container{
+        flex-direction: column;
+    }
+      .link_4{
+        flex-basis: 25%;
+        padding: 20px;
+        text-align: left;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- footer -->
+  <footer class="bg_footer">
+    <section class="container2">
+      <div class="links_container sec_1">
+          <section class="link_1">
+            <p><a href="#" class="text2"><strong>Home</strong></a></p>
+            <p><a href="#" class="text2"><strong>Our Foods</strong></a></p>
+            <p><a href="#" class="text2"><strong>Our Story</strong></a></p>
+          </section>
+          <section class="link_2">
+            <p><a href="#" class="text2">Get Help</a></p>
+            <p><a href="#" class="text3">Contact Us</a></p>
+          </section>
+          <section class="link_3">
+            <p><a href="#" class="text3">Privacy Policy</a></p>
+            <p><a href="#" class="text3">Terms of Use</a></p>
+          </section>
+          <section class="link_4">
+              <h1 class="text2">Connect with Us</h1>
+              <a href="#"><img src="images/icons/facebook-24.png" alt=""></a>
+              <a href="#"><img src="images/icons/instagram-24.png" alt=""></a>
+              <a href="#"><img src="images/icons/twitter-24.png" alt=""></a>
+          </section>
+      </div>
+      <div class="sec_2">
+          <p class="text4">© 2023 Pantry Pal. All Rights Reserved.</p>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
