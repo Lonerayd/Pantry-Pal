@@ -1,6 +1,6 @@
 
 window.addEventListener("scroll", function() {
-    var navbar = document.querySelector("nav");
+    var navbar = document.querySelector(".navbar");
     navbar.classList.toggle("scrolled", window.scrollY > 50);
 
    
@@ -37,6 +37,7 @@ window.addEventListener("scroll", function() {
         $(document).ready(function () {
             $('.burger').click(function () {
                 $('ul').toggleClass('show');
+            
             });
         });
 
