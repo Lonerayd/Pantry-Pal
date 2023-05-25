@@ -8,19 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#icon').click(function () {
-                $('ul').toggleClass('show');
-            });
-        });
-    </script>
+   
 </head>
 <body>
     <header>
     <nav class="storyLine">
         <div class="burger" id="icon">
             <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="mobile-logo">
+            <img src="./images/logoImages/pantry-pal-high-resolution-logo-color-on-transparent-background 1.png">
         </div>
         <ul class="nav-links">
             <li>Home</li>
@@ -54,13 +51,8 @@
         </div>
         
     </main>
-    <script>
-        window.addEventListener("scroll", function() {
-        var navbar = document.querySelector("nav");
-        navbar.classList.toggle("scrolled", window.scrollY > 50);
-    
+    <script src="nav.js">
        
-      });
        </script>
     </body>
     </html>
