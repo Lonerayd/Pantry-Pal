@@ -358,32 +358,37 @@ span{
 }
 
 .name {
+  text-indent: 20px;
   height: 3rem;
   width: 100%;
 }
 
 .number {
+  text-indent: 20px;
   height: 3rem;
   width: 100%;
 }
 
 .email {
+  text-indent: 20px;
   height: 3rem;
   width: 100%;
 }
 
 .address {
-  height: 5rem;
+  text-indent: 20px;
+  height: 3rem;
   width: 100%;
 }
 
 .btnColor {
-  background-color: whitesmoke;
-  color: #970c10;
+  background-color: #970c10;
   border-color: #970c10;
+  color: white;
 }
 
 .btnColor:hover {
   background-color: #970c10;
-  color: whitesmoke;
+  border-color: #970c10;
+  color: white;
 }
