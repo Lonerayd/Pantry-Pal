@@ -28,6 +28,7 @@ const Home = () => {
   }, [dispatch, user])
 
   return (
+   
     <div className="home">
       <div className="workouts">
         {workouts && workouts.map((workout) => (

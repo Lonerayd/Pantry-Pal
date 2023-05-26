@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useLogin } from "../hooks/useLogin"
-
+import Footer from "../components/Footer"
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -13,7 +13,8 @@ const Login = () => {
   }
 
   return (
-    <form className="login" onSubmit={handleSubmit}>
+    <div >
+      <form className="login" onSubmit={handleSubmit}>
       <h3>Log In</h3>
       
       <label>Email address:</label>
@@ -32,6 +33,12 @@ const Login = () => {
       <button disabled={isLoading}>Log in</button>
       {error && <div className="error">{error}</div>}
     </form>
+
+    <Footer></Footer>
+    </div>
+    
+
+   
   )
 }
 

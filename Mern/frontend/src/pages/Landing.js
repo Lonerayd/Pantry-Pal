@@ -1,1 +1,2 @@
-import { useAuthContext } from "../hooks/useAuthContext"
+import Footer from "../components/Footer";
+

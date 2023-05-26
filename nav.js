@@ -1,4 +1,3 @@
-
 window.addEventListener("scroll", function() {
     var navbar = document.querySelector(".navbar");
     navbar.classList.toggle("scrolled", window.scrollY > 50);
@@ -32,19 +31,21 @@ window.addEventListener("scroll", function() {
 
         // story js
         const navbarToggle = document.querySelector('.fa-bars');
-        const links = document.querySelector(".nav-links")
-
-        $(document).ready(function () {
-            $('.burger').click(function () {
-                $('ul').toggleClass('show');
+        const links = document.querySelector(".nav-links");
+        const burger = document.querySelector(".burger");
+        const ul = document.querySelector("ul");
+        // document.ready(function () {
+        //     burger.click(function () {
+        //         ul.toggleClass('show');
             
-            });
-        });
+        //     });
+        // });
+        burger.addEventListener('click', ()=>{ul.classList.toggle('show');})
 
         document.addEventListener('click', (event) => {
             const targetElement = event.target;
             if (!navbarToggle.contains(targetElement)) {
-                $(links).removeClass('show');
+                links.classList.remove('show');
             }
             });
         // story js
