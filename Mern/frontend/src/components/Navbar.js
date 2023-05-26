@@ -23,29 +23,29 @@ const Navbar = () => {
 
           )}
           {!user && (
-            <div>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
-            </div>
+            // <div>
+            //   <Link to="/login">Login</Link>
+            //   <Link to="/signup">Signup</Link>
+            // </div>
 
-      //       <nav className="navbar">
-      //   <div className="burger">
-      //       <i className="fa-solid fa-bars"></i>
+            <nav className={NavCSS.navbar}>
+        <div className={NavCSS.burger}>
+            <i className=fa-solid fa-bars></i>
             
-      //   </div>
-      //   <div className="mobile-logo">
-      //       <img src={logo} alt='logo'></img>
-      //   </div>
-      //   <ul className="nav-links">
-      //       <li>Home</li>
-      //       <li>Our Foods</li>
-      //       <li>Story</li>
-      //     <li className="logo"><img src={logo} alt='logo'></img></li>
-      //     <li>Contact Us</li>
-      //     <li>Login</li>
-      //     <li>Sign Up</li>
-      //   </ul>
-      // </nav>
+        </div>
+        <div className={NavCSS.mobile-logo}>
+            <img src={logo} alt='logo'></img>
+        </div>
+        <ul className={NavCSS.nav-links}>
+            <li>Home</li>
+            <li>Our Foods</li>
+            <li>Story</li>
+          <li className={NavCSS.logo}><img src={logo} alt='logo'></img></li>
+          <li>Contact Us</li>
+          <li>Login</li>
+          <li>Sign Up</li>
+        </ul>
+      </nav>
 
           )}
         
