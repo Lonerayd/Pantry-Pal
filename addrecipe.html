@@ -74,7 +74,7 @@
                   <p>8 recipes</p>
                 </div>
                 <div class="filter-button">
-                  <button type="button" class="btn btn-outline-danger search-button" type="submit">+ Add Recipes</button>
+                  <button type="button" class="btn btn-outline-danger search-button" data-bs-toggle="modal" data-bs-target="#addrecipe">+ Add Recipes</button>
                 </div>
             </div>
             <hr>
@@ -169,7 +169,50 @@
         </div>
       </div>
 
-
+      <!-- MODAL ADD Recipe -->
+      <div class="modal fade" id="addrecipe" tabindex="-1" aria-labelledby="addrecipeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-Modal" id="addrecipeLabel">Add New Recipe</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label text-Modal">Upload Photo</label>
+                  <input class="form-control input-Modal" type="file" id="formFile">
+                </div>
+                <div>
+                  <label for="recipeTitle" class="text-Modal">Title</label><br/>
+                  <input type="text" name="recipeTitle" placeholder="Enter recipe title" class="input-Modal"><br/>
+                  <label for="time" class="text-Modal">Time</label><br/>
+                  <input type="number" name="time" placeholder="0 Mins" class="input-Modal"><br/>
+                  <label for="servingSize" class="text-Modal">Serving Size</label><br/>
+                  <input type="number" name="servingSize" placeholder="0 Servings" class="input-Modal"><br/>
+                  <label for="tags" class="text-Modal">Tags</label><br/>
+                  <input type="text" name="tags" placeholder="Tags" class="input-Modal"><br/>
+                </div>
+                <div class="ingredients-directionBox">
+                  <div>
+                    <label for="ingredients" class="text-Modal">Add Ingredients</label><br/>
+                    <textarea name="ingredients" cols="30" rows="10" class="input-Modal"></textarea>
+                  </div>
+                  <div>
+                    <label for="directions" class="text-Modal">Add Directions</label><br/>
+                    <textarea name="directions" cols="30" rows="10" class="input-Modal"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn search-button">Save Recipe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="addrecipe.js"></script>
 </body>
