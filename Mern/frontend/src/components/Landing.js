@@ -26,11 +26,11 @@ const Landingcomp = () => {
   
   return (
     <div>
-      <main>
-        <div classNameName={Land['p2']}>
+      
+        <div className={Land['p2']}>
           <h1>Choose from a variety of recipes from different parts of the country</h1>
 
-          <div classNameName={Land['categories']}>
+          <div className={Land['categories']}>
             <button className={`${Land.cat1} ${Land.border}`}  id="luzonButton">
               Luzon
             </button>
@@ -118,9 +118,10 @@ const Landingcomp = () => {
           </article>
         </section>
         </div>
-      </main>
-      <Footer></Footer>
+      
+     
     </div>
+    
   )
 }
 

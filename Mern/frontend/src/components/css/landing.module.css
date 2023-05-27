@@ -1,3 +1,4 @@
+
 h1{
   text-align: center;
 }
@@ -8,21 +9,21 @@ h1{
   
 }
 .cat1{
-  background-image: url(../images/luzon../images/L-pancitbatil.png);
+  background-image: url(../images/luzonImages/L-pancitbatil.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100%;
 }
 .cat2{
-  /* background-image: url(../images/visayas../images/V-chickeninasal.png); */
+  background-image: url(../images/visayasImages/V-chickeninasal.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100%;
 }
 .cat3{
-  /* background-image: url(../images/mindanao../images/M-rendang.png); */
+  background-image: url(../images/mindanaoImages/M-rendang.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,6 +75,8 @@ display: block;
   /* background-image: url("../images/logo../images/p2bg.png"); */
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
+
 }
 
 .foodsec{
