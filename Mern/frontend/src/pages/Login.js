@@ -1,6 +1,10 @@
 import { useState } from "react"
 import { useLogin } from "../hooks/useLogin"
 import Footer from "../components/Footer"
+
+// css
+import '../components/css/login.css'
+
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -13,7 +17,7 @@ const Login = () => {
   }
 
   return (
-    <div >
+    <div className="LoginBody">
       <form className="login" onSubmit={handleSubmit}>
       <h3>Log In</h3>
       
@@ -30,11 +34,12 @@ const Login = () => {
         value={password} 
       />
 
-      <button disabled={isLoading}>Log in</button>
+      <button disabled={isLoading} className="loginbtn">Log in</button>
       {error && <div className="error">{error}</div>}
     </form>
-
-    <Footer></Footer>
+      <div className="footerBottom">
+      <Footer></Footer>
+      </div>
     </div>
     
 

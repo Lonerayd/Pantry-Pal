@@ -1,5 +1,9 @@
 import { useState } from "react"
 import { useSignup } from "../hooks/useSignup"
+import Footer from "../components/Footer"
+
+// css
+import '../components/css/login.css'
 
 const Signup = () => {
   const [email, setEmail] = useState('')
@@ -13,25 +17,29 @@ const Signup = () => {
   }
 
   return (
-    <form className="signup" onSubmit={handleSubmit}>
-      <h3>Sign Up</h3>
-      
-      <label>Email address:</label>
-      <input 
-        type="email" 
-        onChange={(e) => setEmail(e.target.value)} 
-        value={email} 
-      />
-      <label>Password:</label>
-      <input 
-        type="password" 
-        onChange={(e) => setPassword(e.target.value)} 
-        value={password} 
-      />
+    <div className="LoginBody">
+      <form className="signup" onSubmit={handleSubmit}>
+        <h3>Sign Up</h3>
+        
+        <label>Email address:</label>
+        <input 
+          type="email" 
+          onChange={(e) => setEmail(e.target.value)} 
+          value={email} 
+        />
+        <label>Password:</label>
+        <input 
+          type="password" 
+          onChange={(e) => setPassword(e.target.value)} 
+          value={password} 
+        />
 
-      <button disabled={isLoading}>Sign up</button>
-      {error && <div className="error">{error}</div>}
-    </form>
+        <button disabled={isLoading} className="loginbtn">Sign up</button>
+        {error && <div className="error">{error}</div>}
+      </form>
+      <Footer></Footer>
+    </div>
+
   )
 }
 

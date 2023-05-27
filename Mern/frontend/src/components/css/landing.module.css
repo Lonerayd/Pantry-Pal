@@ -1,0 +1,98 @@
+h1{
+  text-align: center;
+}
+.categories{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  
+}
+.cat1{
+  background-image: url(images/luzonImages/L-pancitbatil.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+.cat2{
+  background-image: url(images/visayasImages/V-chickeninasal.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+.cat3{
+  background-image: url(images/mindanaoImages/M-rendang.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+.border{
+  height:150px;
+  width: 150px;
+  padding: 15px;
+  color: #F9F9F7;
+  font-size: 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .9;
+  text-shadow: #970C10 2px;
+}
+.border:hover{
+  opacity:1;
+}
+.imgStyle{
+  width:200px;
+  height:200px;
+  border-radius: 20px;
+ 
+}
+
+
+/* js */
+
+.none{
+display: none;
+ 
+
+}
+
+.visib{
+display: block;
+
+
+}
+.p2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("images/logoImages/p2bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.foodsec{
+  width: 100%;
+  animation: mymove 0.7s 1;
+ 
+}
+
+.foodsec h1{
+  padding-bottom: 40px ;
+ 
+}
+@keyframes mymove {
+from {
+opacity: 0;
+/* transform: translateX(-100%); */
+}
+to {
+opacity: 1;
+/* transform: translateX(0); */
+}
+}

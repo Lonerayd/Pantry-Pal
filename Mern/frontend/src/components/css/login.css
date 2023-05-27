@@ -1,0 +1,12 @@
+.loginbtn{
+  background-color: #970C10;
+}
+.loginbtn:hover{
+  opacity:.8;
+}
+.LoginBody{
+  margin-top:150px;
+}
+.footerBottom{
+  bottom:0;
+}
