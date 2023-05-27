@@ -1,68 +1,43 @@
-// import NavCSS from '../components/css/nav.module.css'
-// import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
+const useNavbarEffect = (NavCSS) => {
+  const navbarRef = useRef(null);
+  const burgerRef = useRef(null);
+  const linksRef = useRef(null);
 
-
-// const useNavjs = (src) => {
-  
-//   useEffect(() => {
-//     const script = document.createElement('script');
-//     script.src = src;
-//     script.async = true;
-//     document.body.appendChild(script);
-
-//     return () => {
-//       // Cleanup script when component unmounts
-//       document.body.removeChild(script);
-//     };
-//   }, [src]);
-// };
-// export default useNavjs
-
-import NavCSS from '../components/css/nav.module.css'
-import { useLayoutEffect } from 'react';
-
-const useNavjs = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      window.addEventListener('scroll', function() {
-        var navbar = document.querySelector(NavCSS.navbar);
-        navbar.classList.toggle(NavCSS['scrolled'], window.scrollY > 50);
-      });
+      if (navbarRef.current) {
+        const navbar = navbarRef.current;
+        navbar.classList.toggle(NavCSS.scrolled, window.scrollY > 50);
+      }
     };
 
     const handleClick = (event) => {
-      const links = document.querySelector(NavCSS['nav-links']);
-      const burger = document.querySelector(NavCSS['burger']);
-      const ul = document.querySelector(NavCSS['ul']);
+      const links = linksRef.current;
+      const burger = burgerRef.current;
 
-      const targetElement = event;
+      const targetElement = event.target;
       if (!burger.contains(targetElement)) {
-        links.classList.remove('show');
+        links.classList.remove(NavCSS.show);
       }
       if (burger.contains(targetElement)) {
-        ul.classList.toggle('show');
+        links.classList.toggle(NavCSS.show);
       }
     };
 
     handleScroll(); // Call the handleScroll function immediately
-    document.addEventListener('click', handleClick); // Attach event listener for click events
+    document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
+    document.addEventListener('click', handleClick);
 
     return () => {
       // Cleanup when component unmounts
-      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
   }, []);
 
-  return null; // Since this is a hook, it doesn't render any JSX, so you can return null
+  return { navbarRef, burgerRef, linksRef };
 };
 
-export default useNavjs;
-
-
-
-
-
-
-
+export default useNavbarEffect;

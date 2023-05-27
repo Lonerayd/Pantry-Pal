@@ -4,10 +4,10 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import NavCSS from './css/nav.module.css'
 import logo from './images/logo.png'
-import { useEffect, useRef} from 'react'
+import { useEffect, useRef,useLayoutEffect} from 'react'
 
 import './css/nav.css'
-import useNavjs from '../hooks/navscript'
+import useNavbarEffect from '../hooks/navscript'
 
 
 const Navbar = () => {
@@ -19,42 +19,43 @@ const Navbar = () => {
     logout()
   }
 
+  const { navbarRef, burgerRef, linksRef } = useNavbarEffect(NavCSS);
+  // const navbarRef = useRef(null);
+  // const burgerRef = useRef(null);
+  // const linksRef = useRef(null);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (navbarRef.current) {
+  //       const navbar = navbarRef.current;
+  //       navbar.classList.toggle(NavCSS.scrolled, window.scrollY > 50);
+  //     }
+  //   };
 
-  const navbarRef = useRef(null);
-  const burgerRef = useRef(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (navbarRef.current) {
-        const navbar = navbarRef.current;
-        navbar.classList.toggle(NavCSS.scrolled, window.scrollY > 50);
-      }
-    };
+  //   const handleClick = (event) => {
+  //     const links = linksRef.current;
+  //     const burger = burgerRef.current;
+      
 
-    const handleClick = (event) => {
-      const links = document.querySelector(NavCSS['nav-links']);
-      const burger = document.querySelector(NavCSS['burger']);
-      const ul = document.querySelector(NavCSS['ul']);
+  //     const targetElement = event.target;
+  //     if (!burger.contains(targetElement)) {
+  //       links.classList.remove(NavCSS.show);
+  //     }
+  //     if ( burger.contains(targetElement)) {
+  //       links.classList.toggle(NavCSS.show);
+  //     }
+  //   };
 
-      const targetElement = event;
-      if (!burger.contains(targetElement)) {
-        links.classList.remove('show');
-      }
-      if (burger.contains(targetElement)) {
-        ul.classList.toggle('show');
-      }
-    };
-
-    handleScroll(); // Call the handleScroll function immediately
-    document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
-    document.addEventListener('click', handleClick);
+  //   handleScroll(); // Call the handleScroll function immediately
+  //   document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
+  //   document.addEventListener('click', handleClick);
     
 
-    return () => {
-      // Cleanup when component unmounts
-      document.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-    };
-  }, []);
+  //   return () => {
+  //     // Cleanup when component unmounts
+  //     document.removeEventListener('scroll', handleScroll);
+  //     document.removeEventListener('click', handleClick);
+  //   };
+  // }, []);
 
 
 //  useNavjs();
@@ -82,7 +83,7 @@ const Navbar = () => {
           <div className={NavCSS['mobile-logo']}>
               <img src={logo} alt='logo'></img>
           </div>
-          <ul className={NavCSS['nav-links']}>
+          <ul className={NavCSS['nav-links']} ref={linksRef}>
               <li>Home</li>
               <li>Our Foods</li>
               <li>Story</li>

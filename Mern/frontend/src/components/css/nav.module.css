@@ -156,8 +156,8 @@
      z-index: 0;
      color: black;
     }
-    .nav-links.show {
-      left: 0;
+   .show {
+      left: 0 !important;
     }
     .logo {
       width: 50px;
