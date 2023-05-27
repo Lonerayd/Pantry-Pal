@@ -1,4 +1,4 @@
-import NavCss from '../css/nav.module.css'
+
   const handleScroll =()=>{
     window.addEventListener("scroll", function() {
         var navbar = document.querySelector(NavCss['navbar']);

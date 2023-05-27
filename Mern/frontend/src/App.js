@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Landing from './pages/Landing'
+import Footer from './components/Footer'
 
 function App() {
   const { user } = useAuthContext()
@@ -36,6 +37,8 @@ function App() {
             />
           </Routes>
         </div>
+        {!user ? <Footer/> :null}
+       
       </BrowserRouter>
     </div>
   );

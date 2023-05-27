@@ -8,7 +8,7 @@ const Footer = () => {
     
 
     return  ( 
-      <div>
+      <div className='globalFooter'>
         <footer className={Foot['bg_footer']}>
           <section className={Foot['container2'] }>
             <div className={`${Foot.links_container} ${Foot.sec_1}`}>

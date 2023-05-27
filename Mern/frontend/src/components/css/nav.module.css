@@ -82,9 +82,9 @@
    font-size: 2rem;
    font-family: Arial, Helvetica, sans-serif;
   }
-  .navbar.scrolled {
+  .scrolled {
     background-color: #F7EDD0;
-    height: 6vw;
+    height: 6vw !important;
     transition: 0.3 ease-in-out;
     color: rgb(52, 52, 52);
   }

@@ -18,10 +18,46 @@ const Navbar = () => {
   const handleClick = () => {
     logout()
   }
-  useNavjs('./ReactNav.js');
 
 
- 
+  const navbarRef = useRef(null);
+  const burgerRef = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navbarRef.current) {
+        const navbar = navbarRef.current;
+        navbar.classList.toggle(NavCSS.scrolled, window.scrollY > 50);
+      }
+    };
+
+    const handleClick = (event) => {
+      const links = document.querySelector(NavCSS['nav-links']);
+      const burger = document.querySelector(NavCSS['burger']);
+      const ul = document.querySelector(NavCSS['ul']);
+
+      const targetElement = event;
+      if (!burger.contains(targetElement)) {
+        links.classList.remove('show');
+      }
+      if (burger.contains(targetElement)) {
+        ul.classList.toggle('show');
+      }
+    };
+
+    handleScroll(); // Call the handleScroll function immediately
+    document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
+    document.addEventListener('click', handleClick);
+    
+
+    return () => {
+      // Cleanup when component unmounts
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
+
+//  useNavjs();
 
 
   return (
@@ -37,8 +73,28 @@ const Navbar = () => {
           )}
           {!user && ( 
           
+          
+          <nav className={NavCSS['navbar']} ref={navbarRef} > 
+          <div className={NavCSS['burger']} ref={burgerRef}>
+              <i className="fa-solid fa-bars"></i>
+              
+          </div>
+          <div className={NavCSS['mobile-logo']}>
+              <img src={logo} alt='logo'></img>
+          </div>
+          <ul className={NavCSS['nav-links']}>
+              <li>Home</li>
+              <li>Our Foods</li>
+              <li>Story</li>
+            <li className={NavCSS['logo']}><img src={logo} alt='logo'></img></li>
+            <li>Contact Us</li>
+            <li><NavLink to="/login" className={NavCSS['reactlink']}> Login</NavLink></li>
+            <li><NavLink to="/signup" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
+          </ul>
+        </nav>
+)}
 
-      <nav className="navbar" >
+{/* <nav className="navbar" >
         <div className="burger">
             <i className="fa-solid fa-bars"></i>
             
@@ -55,30 +111,10 @@ const Navbar = () => {
           <li><NavLink to="/login" className='reactlink'> Login</NavLink></li>
           <li><NavLink to="/signup" className='reactlink'>Sign Up</NavLink> </li>
         </ul>
-      </nav>
-
-)}
-
-      
-   
-             {/* <nav className={NavCSS['navbar']}  >
-        <div className={NavCSS['burger']}>
-            <i className="fa-solid fa-bars"></i>
-            
-        </div>
-        <div className={NavCSS['mobile-logo']}>
-            <img src={logo} alt='logo'></img>
-        </div>
-        <ul className={NavCSS['nav-links']}>
-            <li>Home</li>
-            <li>Our Foods</li>
-            <li>Story</li>
-          <li className={NavCSS['logo']}><img src={logo} alt='logo'></img></li>
-          <li>Contact Us</li>
-          <li><NavLink to="/login" className={NavCSS['reactlink']}> Login</NavLink></li>
-          <li><NavLink to="/signup" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
-        </ul>
       </nav> */}
+
+   
+            
       
         
     </header>

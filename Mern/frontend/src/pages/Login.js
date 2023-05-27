@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useLogin } from "../hooks/useLogin"
-import Footer from "../components/Footer"
+
 
 // css
 import '../components/css/login.css'
@@ -38,7 +38,7 @@ const Login = () => {
       {error && <div className="error">{error}</div>}
     </form>
       <div className="footerBottom">
-      <Footer></Footer>
+     
       </div>
     </div>
     
