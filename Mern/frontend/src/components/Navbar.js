@@ -4,17 +4,25 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import NavCSS from './css/nav.module.css'
 import logo from './images/logo.png'
+import { useEffect, useRef} from 'react'
+
+import './css/nav.css'
 import useNavjs from '../hooks/navscript'
+
 
 const Navbar = () => {
   const { logout } = useLogout()
   const { user } = useAuthContext()
-  useNavjs()
  
+  
   const handleClick = () => {
     logout()
-    
   }
+  useNavjs('./ReactNav.js');
+
+
+ 
+
 
   return (
     <header>
@@ -27,14 +35,34 @@ const Navbar = () => {
            
 
           )}
-          {!user && (
-            // <div>
-            //   <Link to="/login">Login</Link>
-            //   <Link to="/signup">Signup</Link>
-            // </div>
+          {!user && ( 
+          
+
+      <nav className="navbar" >
+        <div className="burger">
+            <i className="fa-solid fa-bars"></i>
             
-            <nav className={NavCSS.navbar}>
-        <div className={NavCSS.burger}>
+        </div>
+        <div className='mobile-logo'>
+            <img src={logo} alt='logo'></img>
+        </div>
+        <ul className='nav-links'>
+            <li>Home</li>
+            <li>Our Foods</li>
+            <li>Story</li>
+          <li className='logo'><img src={logo} alt='logo'></img></li>
+          <li>Contact Us</li>
+          <li><NavLink to="/login" className='reactlink'> Login</NavLink></li>
+          <li><NavLink to="/signup" className='reactlink'>Sign Up</NavLink> </li>
+        </ul>
+      </nav>
+
+)}
+
+      
+   
+             {/* <nav className={NavCSS['navbar']}  >
+        <div className={NavCSS['burger']}>
             <i className="fa-solid fa-bars"></i>
             
         </div>
@@ -45,16 +73,13 @@ const Navbar = () => {
             <li>Home</li>
             <li>Our Foods</li>
             <li>Story</li>
-          <li className={NavCSS.logo}><img src={logo} alt='logo'></img></li>
+          <li className={NavCSS['logo']}><img src={logo} alt='logo'></img></li>
           <li>Contact Us</li>
           <li><NavLink to="/login" className={NavCSS['reactlink']}> Login</NavLink></li>
           <li><NavLink to="/signup" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
         </ul>
-      </nav>
+      </nav> */}
       
-          )}
-        
-        <script src=''></script>
         
     </header>
      

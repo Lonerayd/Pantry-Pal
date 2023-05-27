@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+
+  
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+  }
+  
+  
+  
+.logo{
+  height: 100%;
+  background-color: #F7EDD0;
+  border-radius: 50%;
+  padding: 3px;
+}
+.logo img{
+  height: 100%;
+  background-color: #F7EDD0;
+  border-radius: 50%;
+  
+}
+.mobile-logo
+{
+  display: none;
+ 
+}
+  ul li {
+   
+    color: inherit;
+    font-size: inherit;
+    text-align: center;
+  }
+  
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    
+    min-height: 50px !important;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+    display: flex;
+   justify-content: space-between;
+  align-items: center;
+   color: aliceblue;
+   font-size: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  .storyLine {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6vw;
+    min-height: 50px;
+    background-color: #F7EDD0;
+    transition: 0.3s ease-in-out;
+    z-index: 11;
+    display: flex;
+   justify-content: center;
+  align-items: center;
+   /* color:rgb(15, 15, 15); */
+   color: rgb(52, 52, 52);
+   font-size: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  .navbar.scrolled {
+    background-color: #F7EDD0;
+    height: 6vw;
+    transition: 0.3 ease-in-out;
+    color: rgb(52, 52, 52);
+  }
+  .ourStoryHeading {
+    padding-top: calc(5vw + 10px);
+    padding-bottom: 25px;
+  }
+  .storyHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 200px 200px;
+    color: aliceblue;
+
+  }
+  .storyHeading .ourStoryHeading h1 {
+    font-size: 3rem;
+    color: black;
+
+  }
+  .storyHeading .storyPage p {
+    font-size: 1.5rem;
+    color: black;
+  }
+ .burger
+ {
+  display: none;
+ }
+ .burger i{
+    cursor: pointer;
+ }
+ .zzzz {
+ color: white;
+ }
+  
+  
+  @media (max-width: 1024px){
+    .navbar {
+      font-size: 1.5rem;
+    }
+    .storyLine{
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .metaTag h2{
+      font-size: 2.5rem;
+    }
+   .navbar{
+     height: 12vw;
+      justify-content: center;
+    }
+    
+    .nav-links {
+     position: fixed;
+     width: 30%;
+     height: 100vh;
+     background-color: #A1AFA0;
+     top: 0px;
+     left: -100%;
+     text-align: center;
+     flex-direction: column;
+     justify-content: start;
+     gap: 20px;
+     transition: all .5s;
+     padding-top: 50px;
+     z-index: 0;
+     color: black;
+    }
+    .nav-links.show {
+      left: 0;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      display: none;
+    }
+    .mobile-logo{
+      display: block;
+      height: 100%;
+      background-color: #F7EDD0;
+      border-radius: 50%;
+      padding: 2px;
+    }
+    .mobile-logo img{
+      height: 100%;
+  
+  
+    }
+    .burger {
+      order: 1;
+      display: block;
+      padding-left: 20px;
+      z-index: 2;
+     left: 0;
+      position: absolute;
+    }
+    .storyHeading {
+      padding: 30px 50px 50px;
+    }
+    .storyHeading .ourStoryHeading h1 {
+      font-size: 2rem;
+    }
+    .storyHeading .storyPage p {
+      font-size: 1rem;
+    }
+    .metaTag h2{
+      font-size: 2rem;
+    }
+
+    
+
+  }
+
+  .reactlink{
+    color: inherit;
+  }
