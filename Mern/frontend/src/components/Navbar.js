@@ -4,7 +4,7 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import NavCSS from './css/nav.module.css'
 import logo from './images/logo.png'
-import { useEffect, useRef,useLayoutEffect} from 'react'
+
 
 import './css/nav.css'
 import useNavbarEffect from '../hooks/navscript'

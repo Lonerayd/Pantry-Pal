@@ -19,30 +19,34 @@ import MinImg2 from './images/mindanaoImages/M-chicken pyanggang.png'
 import MinImg3 from './images/mindanaoImages/M-tiyula itim.png'
 import MinImg4 from './images/mindanaoImages/M-rendang.png'
 import MinImg5 from './images/mindanaoImages/M-kuning.png'
+import { useState } from 'react'
 
 
+const LandingBtnComp = () => {
+  const [activeCategory, setActiveCategory] = useState('luzon');
 
-const Landingcomp = () => {
-  
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+  };
   return (
     <div>
-      
+      <main>
         <div className={Land['p2']}>
           <h1>Choose from a variety of recipes from different parts of the country</h1>
 
           <div className={Land['categories']}>
-            <button className={`${Land.cat1} ${Land.border}`}  id="luzonButton">
+            <button className={`${Land.cat1} ${Land.border}`} onClick={() => handleCategoryClick('luzon')}  id="luzonButton">
               Luzon
             </button>
-            <button className={`${Land.cat2} ${Land.border}`}  id="visayasButton">
+            <button className={`${Land.cat2} ${Land.border}`}  onClick={() => handleCategoryClick('visayas')} id="visayasButton">
               Visayas
             </button>
-            <button className={`${Land.cat3} ${Land.border}`}  id="mindanaoButton">
+            <button className={`${Land.cat3} ${Land.border}`} onClick={() => handleCategoryClick('mindanao')} id="mindanaoButton">
               Mindanao
             </button>
         </div>
       
-        <section className={`${Land.none} ${Land.foodsec}`} id="luzon" >
+        <section className={`${activeCategory === 'luzon' ? '' : Land.none} ${Land.foodsec}`} id="luzon" >
           <h1>Luzon</h1>
           <article className={Land['categories']}>
             <div className={Land['food1L']}>
@@ -67,7 +71,7 @@ const Landingcomp = () => {
             </div>
           </article>
         </section>
-        <section className={`${Land.none} ${Land.foodsec}`} id="visayas">
+        <section className={`${activeCategory === 'visayas' ? '' : Land.none} ${Land.foodsec}`} id="visayas">
           <h1>Visayas</h1>
           <article className={Land['categories']}>
             <div className={Land['food1V']}>
@@ -92,7 +96,7 @@ const Landingcomp = () => {
             </div>
           </article>
         </section>
-        <section className={`${Land.none} ${Land.foodsec}`} id="mindanao" >
+        <section className={`${activeCategory === 'mindanao' ? '' : Land.none} ${Land.foodsec}`} id="mindanao" >
           <h1>Mindanao</h1>
           <article className={Land['categories']}>
             <div className={Land['food1M']}>
@@ -118,11 +122,10 @@ const Landingcomp = () => {
           </article>
         </section>
         </div>
+      </main>
       
-     
     </div>
-    
   )
 }
 
-export default Landingcomp
+export default LandingBtnComp
