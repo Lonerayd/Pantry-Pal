@@ -81,4 +81,13 @@
       padding: 20px;
       text-align: left;
     }
+    .bg_footer {
+      display: flex;
+      justify-content: center;
+    }
+    .container2 {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }

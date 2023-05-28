@@ -25,7 +25,7 @@ h1{
   border-radius: 100%;
 }
 .border{
-  height:15vw;
+  height:14.5vw;
   width: 15vw;
   min-height: 100px;
   min-width: 100px;
@@ -49,8 +49,6 @@ h1{
 
 .none{
 display: none !important;
- 
-
 }
 
 .visib{
@@ -67,6 +65,7 @@ display: block;
   background-image: url("../images/bg/p2bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  
   
   
 }
@@ -119,4 +118,34 @@ to {
 opacity: 1;
 /* transform: translateX(0); */
 }
+}
+@media (max-width: 768px) {
+  .none {
+   /* display: flex !important; */
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    align-content: center;
+    
+  }
+  .imgStyle {
+    width: 70px;
+    height: 80px;
+
+  }
+  .foodL {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .categories {
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    flex-wrap: nowrap;
+  }
+  .p2 {
+    padding-top: 40px;
+  }
 }
