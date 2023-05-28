@@ -19,7 +19,7 @@ const Navbar = () => {
     logout()
   }
 
-  const { navbarRef, burgerRef, linksRef } = useNavbarEffect(NavCSS);
+  const { navbarRef, burgerRef, linksRef } = useNavbarEffect(NavCSS, user);
 
 
 
@@ -61,7 +61,7 @@ const Navbar = () => {
 
    
             
-      
+
         
     </header>
      

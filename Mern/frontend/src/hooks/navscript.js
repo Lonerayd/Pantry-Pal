@@ -1,11 +1,13 @@
 import { useEffect, useRef } from 'react';
-
-const useNavbarEffect = (NavCSS) => {
+import { useAuthContext } from './useAuthContext';
+const useNavbarEffect = (NavCSS, user) => {
   const navbarRef = useRef(null);
   const burgerRef = useRef(null);
   const linksRef = useRef(null);
 
   useEffect(() => {
+    const shouldApplyEffect = user; // Check if the user object is truthy
+
     const handleScroll = () => {
       if (navbarRef.current) {
         const navbar = navbarRef.current;
@@ -26,6 +28,10 @@ const useNavbarEffect = (NavCSS) => {
       }
     };
 
+    if (shouldApplyEffect!==null) {
+      return; // Skip the effect if the user is not logged in
+    }
+
     handleScroll(); // Call the handleScroll function immediately
     document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
     document.addEventListener('click', handleClick);
@@ -35,7 +41,7 @@ const useNavbarEffect = (NavCSS) => {
       document.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, []);
+  }, [user]); // Add user as a dependency to reapply the effect when it changes
 
   return { navbarRef, burgerRef, linksRef };
 };
