@@ -1,15 +1,16 @@
 
 
 import LandingBtnComp from "../components/LandBtn";
-import Footer from "../components/Footer"
+import LandFirst from "../components/LandFirst";
+
 const  Landing =() => {
 
 
   return(
     <div >
-
+       <LandFirst/>
     <LandingBtnComp/>
-     
+    
     </div>
    
   )

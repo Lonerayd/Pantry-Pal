@@ -1,0 +1,59 @@
+@media (max-width: 768px) {
+    .metaTag h2{
+      font-size: 2.5rem;
+    }
+ }
+.p1 {
+    background-image: url('../images/logoImages/Group\ 1.png');
+    background-size: cover;
+    height: 100svh;
+    }
+.metaTag {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: aliceblue;
+    font-size: 2rem;
+    height: 100%;
+   
+    padding-top: 10vw;
+    overflow: hidden;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+}
+.toClick {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    
+   
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+.toClickBtnLeft {
+    width: 200px;
+    height: 50px;
+    background: rgba(151, 12, 16, 0.4);
+    border: 1px solid #F9F9F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    color: aliceblue;
+}
+.toClickBtnRight {
+    width: 200px;
+    height: 50px;
+    background: rgba(151, 12, 16, 0.4);
+    border: 1px solid #F9F9F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    color: aliceblue;
+}
+.bgImage {
+  background-image: url('../images/logoImages/p2bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

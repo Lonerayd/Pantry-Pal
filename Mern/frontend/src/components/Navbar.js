@@ -6,7 +6,7 @@ import NavCSS from './css/nav.module.css'
 import logo from './images/logo.png'
 
 
-import './css/nav.css'
+
 import useNavbarEffect from '../hooks/navscript'
 
 
@@ -20,45 +20,7 @@ const Navbar = () => {
   }
 
   const { navbarRef, burgerRef, linksRef } = useNavbarEffect(NavCSS);
-  // const navbarRef = useRef(null);
-  // const burgerRef = useRef(null);
-  // const linksRef = useRef(null);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (navbarRef.current) {
-  //       const navbar = navbarRef.current;
-  //       navbar.classList.toggle(NavCSS.scrolled, window.scrollY > 50);
-  //     }
-  //   };
 
-  //   const handleClick = (event) => {
-  //     const links = linksRef.current;
-  //     const burger = burgerRef.current;
-      
-
-  //     const targetElement = event.target;
-  //     if (!burger.contains(targetElement)) {
-  //       links.classList.remove(NavCSS.show);
-  //     }
-  //     if ( burger.contains(targetElement)) {
-  //       links.classList.toggle(NavCSS.show);
-  //     }
-  //   };
-
-  //   handleScroll(); // Call the handleScroll function immediately
-  //   document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
-  //   document.addEventListener('click', handleClick);
-    
-
-  //   return () => {
-  //     // Cleanup when component unmounts
-  //     document.removeEventListener('scroll', handleScroll);
-  //     document.removeEventListener('click', handleClick);
-  //   };
-  // }, []);
-
-
-//  useNavjs();
 
 
   return (
@@ -95,24 +57,7 @@ const Navbar = () => {
         </nav>
 )}
 
-{/* <nav className="navbar" >
-        <div className="burger">
-            <i className="fa-solid fa-bars"></i>
-            
-        </div>
-        <div className='mobile-logo'>
-            <img src={logo} alt='logo'></img>
-        </div>
-        <ul className='nav-links'>
-            <li>Home</li>
-            <li>Our Foods</li>
-            <li>Story</li>
-          <li className='logo'><img src={logo} alt='logo'></img></li>
-          <li>Contact Us</li>
-          <li><NavLink to="/login" className='reactlink'> Login</NavLink></li>
-          <li><NavLink to="/signup" className='reactlink'>Sign Up</NavLink> </li>
-        </ul>
-      </nav> */}
+
 
    
             

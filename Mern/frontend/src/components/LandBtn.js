@@ -49,23 +49,23 @@ const LandingBtnComp = () => {
         <section className={`${activeCategory === 'luzon' ? '' : Land.none} ${Land.foodsec}`} id="luzon" >
           <h1>Luzon</h1>
           <article className={Land['categories']}>
-            <div className={Land['food1L']}>
+            <div className={Land['foodL']}>
                 <img src={LuzonImg1} className={Land['imgStyle']}></img>
                 <p>Poqui Poqui</p>
             </div>
-            <div className={Land['food2L']}>
+            <div className={Land['foodL']}>
                 <img src={LuzonImg2} className={Land['imgStyle']}></img>
                 <p>Igado</p>
             </div>
-            <div className={Land['food3L']}>
+            <div className={Land['foodL']}>
                 <img src={LuzonImg3} className={Land['imgStyle']}></img>
                 <p>Dinakdakan</p>
             </div>
-            <div className={Land['food4L']}>
+            <div className={Land['foodL']}>
                 <img src={LuzonImg4} className={Land['imgStyle']}></img>
                 <p>Pancit Batil Patong</p>
             </div>
-            <div className={Land['food5L']}>
+            <div className={Land['foodL']}>
                 <img src={LuzonImg5} className={Land['imgStyle']}></img>
                 <p>Sisig</p>
             </div>
@@ -74,23 +74,23 @@ const LandingBtnComp = () => {
         <section className={`${activeCategory === 'visayas' ? '' : Land.none} ${Land.foodsec}`} id="visayas">
           <h1>Visayas</h1>
           <article className={Land['categories']}>
-            <div className={Land['food1V']}>
+            <div className={Land['foodL']}>
               <img src={VisImg1} className={Land['imgStyle']}></img>
               <p>Buriring</p>
             </div>
-            <div className={Land['food2V']}>
+            <div className={Land['foodL']}>
               <img src={VisImg2} className={Land['imgStyle']}></img>
               <p>Chicken Inasal</p>
             </div>
-            <div className={Land['food3V']}>
+            <div className={Land['foodL']}>
               <img src={VisImg3} className={Land['imgStyle']}></img>
               <p>Humba</p>
             </div>
-            <div className={Land['food4V']}>
+            <div className={Land['foodL']}>
               <img src={VisImg4} className={Land['imgStyle']}></img>
               <p>Lumpiang Ubod</p>
             </div>
-            <div className={Land['food5V']}>
+            <div className={Land['foodL']}>
               <img src={VisImg5} className={Land['imgStyle']}></img>
               <p>La Paz Batchoy</p>
             </div>
@@ -99,23 +99,23 @@ const LandingBtnComp = () => {
         <section className={`${activeCategory === 'mindanao' ? '' : Land.none} ${Land.foodsec}`} id="mindanao" >
           <h1>Mindanao</h1>
           <article className={Land['categories']}>
-            <div className={Land['food1M']}>
+            <div className={Land['foodL']}>
               <img src={MinImg1} className={Land['imgStyle']}></img>
               <p>Beef Kulma</p>
             </div>
-            <div className={Land['food2M']}>
+            <div className={Land['foodL']}>
               <img src={MinImg2} className={Land['imgStyle']}></img>
               <p>Chicken Pyanggang</p>
             </div>
-            <div className={Land['food3M']}>
+            <div className={Land['foodL']}>
               <img src={MinImg3} className={Land['imgStyle']}></img>
               <p>Tiyula Itim</p>
             </div>
-            <div className={Land['food4M']}>
+            <div className={Land['foodL']}>
               <img src={MinImg4} className={Land['imgStyle']}></img>
               <p>Rendang</p>
             </div>
-            <div className={Land['food5M']}>
+            <div className={Land['foodL']}>
               <img src={MinImg5} className={Land['imgStyle']}></img>
               <p>Kuning</p>
             </div>
