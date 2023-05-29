@@ -8,7 +8,7 @@ import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Landing from './pages/Landing'
 import Footer from './components/Footer'
-import Demo from './components/NavUser'
+
 function App() {
   const { user } = useAuthContext()
 
