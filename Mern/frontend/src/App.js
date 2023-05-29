@@ -8,7 +8,7 @@ import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Landing from './pages/Landing'
 import Footer from './components/Footer'
-
+import Story from './pages/OurStory'
 function App() {
   const { user } = useAuthContext()
 
@@ -28,7 +28,10 @@ function App() {
               path="/pantrypal"
               element={!user ? <Landing/>:<Navigate to="/login"/>}
             />
-             
+             <Route
+              path='/OurStory'
+              element={!user ? <Story/>:<Navigate to="/login"/>}
+             />
             <Route 
               path="/login" 
               element={!user ? <Login /> : <Navigate to="/" />} 
@@ -37,6 +40,7 @@ function App() {
               path="/signup" 
               element={!user ? <Signup /> : <Navigate to="/" />} 
             />
+
           </Routes>
         </div>
         {!user ? <Footer/> :null}
