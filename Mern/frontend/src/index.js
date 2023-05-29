@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { WorkoutsContextProvider } from './context/WorkoutContext'
 import { AuthContextProvider } from './context/AuthContext'
-
+import { RecipesContextProvider } from './context/RecipeContext';
 
 
 
@@ -14,11 +14,13 @@ root.render(
   
     <React.StrictMode>
     <AuthContextProvider>
+
       <WorkoutsContextProvider>
+        <RecipesContextProvider>
        
         <App/>
           
-        
+        </RecipesContextProvider>
       </WorkoutsContextProvider>
     </AuthContextProvider>
     </React.StrictMode>

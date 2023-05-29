@@ -79,6 +79,7 @@ const RecipeForm = () => {
         <div key={index}>
           <input
             type="text"
+            placeholder="ingredient"
             value={ingredient.name}
             onChange={(e) =>
               handleIngredientChange(index, "name", e.target.value)
@@ -87,6 +88,7 @@ const RecipeForm = () => {
           />
           <input
             type="number"
+            placeholder="amount"
             value={ingredient.amount}
             onChange={(e) =>
               handleIngredientChange(index, "amount", e.target.value)

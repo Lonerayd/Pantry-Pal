@@ -38,3 +38,11 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.create input[type="text"],
+.create input[type="number"],
+.create textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
