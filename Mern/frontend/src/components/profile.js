@@ -1,6 +1,6 @@
 import React from 'react';
 import Prof from './css/profile.module.css';
-import ProfilePic1 from '../components/images/icons/profileIcon.png' 
+import ProfilePic1 from './images/icons/profileIcon.png' 
 import ProfilePic2 from './images/icons/icon11.png' 
 
 const Profile = () => {

@@ -6,6 +6,7 @@ import NavCSS from './css/nav.module.css';
 import logo from './images/logo.png';
 import { useState, useEffect } from 'react';
 import useNavbarEffect from '../hooks/navscript';
+import UserNavCSS from './css/userNav.module.css'
 
 
 const Navbar = () => {
@@ -27,28 +28,28 @@ const Navbar = () => {
         <div id="logusernav">
           <span>{user.email}</span>
           <button onClick={handleClick}>Log out</button>
-          <nav class="navbar">
-        <div class="navbar-toggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+          <nav className={["navbar"]}>
+        <div className={UserNavCSS["navbar-toggle"]}>
+          <div className={UserNavCSS["bar"]}></div>
+          <div className={UserNavCSS["bar"]}></div>
+          <div className={UserNavCSS["bar"]}></div>
         </div>
-        <div class="navbar-logo">
+        <div className={UserNavCSS["navbar-logo"]}>
         
         </div>
-        <div class="sidebar-overlay"></div>
-        <div class="sidebar">
-          <div class="sidebar-header">
-            <div class="sidebar-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
+        <div className={UserNavCSS["sidebar-overlay"]}></div>
+        <div className={UserNavCSS["sidebar"]}>
+          <div className={UserNavCSS["sidebar-header"]}>
+            <div className={UserNavCSS["sidebar-toggle"]}>
+              <div className={UserNavCSS["bar"]}></div>
+              <div className={UserNavCSS["bar"]}></div>
+              <div className={UserNavCSS["bar"]}></div>
             </div>
-            <div class="sidebar-logo">
+            <div className={UserNavCSS["sidebar-logo"]}>
              
             </div>
           </div>
-          <ul class="sidebar-menu">
+          <ul className={UserNavCSS["sidebar-menu"]}>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
