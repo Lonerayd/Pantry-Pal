@@ -53,3 +53,70 @@ textarea{
   input, textarea {
     border-radius: 5px;
   }
+
+
+
+
+
+
+  /* MEDIA QUERY (SMALL) */
+  @media only screen and (max-width: 667px)
+  {
+    .contactUsBody{
+      background-image: url('../images/logoImages/backgroundimg.png');
+      background-repeat: no-repeat;
+      background-size: auto;
+      padding-bottom: 20px;
+    }
+  .form-container{
+      overflow-x:auto;
+  }
+  
+  h1{
+      text-align: center;
+      padding-top: 110px;
+    }
+  table{
+      margin:4% auto;
+      background-color: #F7EDD0;
+      padding:5px;
+      border-radius: 10px;
+      width: 100px;
+    }
+  th, td{
+      padding: 5px;
+  }
+  label{
+      padding-top: 7px;
+      margin-left: 8px;
+  }
+  input{
+      border-style: none;
+      border: 1px solid rgb(125, 125, 125);
+      margin-left: 6px;
+      width: 150px;
+  }
+  textarea{
+      margin-left: 0px;
+  }
+  .submit-container{
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 18px;
+    }
+    .submitbtn{
+      background-color: #970C10;
+      padding: 10px 70px;
+      border-radius: 20px;
+      border-style: none;
+      color: #F9F9F7;
+      opacity:.8;
+    }
+    .submitbtn:hover{
+      opacity:1;
+    }
+    input, textarea {
+      border-radius: 5px;
+    }
+  
+  }
