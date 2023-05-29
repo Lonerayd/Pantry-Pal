@@ -11,6 +11,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 // components
 import WorkoutDetails from '../components/WorkoutDetails';
 import WorkoutForm from '../components/WorkoutForm';
+import HomeCss from '../components/css/home.module.css'
 
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext();
@@ -67,28 +68,35 @@ const Home = () => {
   const totalPages = Math.ceil(filteredWorkouts.length / workoutsPerPage);
 
   return (
-    <div className="home">
-      <div className="search-bar">
-        <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search workouts" />
+    <div className={HomeCss['home']}>
+      <div className={HomeCss['search-recipe']}>
+        <div className={HomeCss['search-bar']}>
+          <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search recipes" style={{ width: '500px', padding: '10px', borderRadius: '20px'}}/>
+        </div>
       </div>
-      <div className="workouts">
-        {currentWorkouts.map((workout) => (
-          <WorkoutDetails key={workout._id} workout={workout} />
-        ))}
+      <div className={HomeCss['add-recipe']}>
+        <div className={HomeCss['workouts']}>
+          {currentWorkouts.map((workout) => (
+            <WorkoutDetails key={workout._id} workout={workout} />
+          ))}
+        </div>
+      
+        {/* Pagination */}
+        <div className={HomeCss['pagination']}>
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => handlePageChange(index + 1)}
+              className={currentPage === index + 1 ? 'active' : ''}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
-      {/* Pagination */}
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index + 1}
-            onClick={() => handlePageChange(index + 1)}
-            className={currentPage === index + 1 ? 'active' : ''}
-          >
-            {index + 1}
-          </button>
-        ))}
+      <div className={HomeCss['workOut']}>
+        <WorkoutForm />
       </div>
-      <WorkoutForm />
     </div>
   );
 };

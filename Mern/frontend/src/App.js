@@ -12,6 +12,7 @@ import ContactUs from './pages/ContactUs'
 
 
 import Story from './pages/OurStory'
+import './index.css'
 
 function App() {
   const { user } = useAuthContext()

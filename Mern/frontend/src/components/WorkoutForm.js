@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from '../hooks/useAuthContext'
+import HomeCss from './css/home.module.css'
 
 const WorkoutForm = () => {
   const { dispatch } = useWorkoutsContext()
@@ -47,10 +48,10 @@ const WorkoutForm = () => {
   }
 
   return (
-    <form className="create" onSubmit={handleSubmit}>
-      <h3>Add a New Workout</h3>
+    <form className={HomeCss['adjustHere']} onSubmit={handleSubmit}>
+      <h3>Add a New Recipe</h3>
 
-      <label>Excersize Title:</label>
+      <label>Recipe Title:</label>
       <input 
         type="text"
         onChange={(e) => setTitle(e.target.value)}
@@ -58,7 +59,7 @@ const WorkoutForm = () => {
         className={emptyFields.includes('title') ? 'error' : ''}
       />
 
-      <label>Load (in kg):</label>
+      <label>Cooking Time:</label>
       <input 
         type="number"
         onChange={(e) => setLoad(e.target.value)}
@@ -66,15 +67,16 @@ const WorkoutForm = () => {
         className={emptyFields.includes('load') ? 'error' : ''}
       />
 
-      <label>Reps:</label>
+      <label>Per Serving:</label>
       <input 
         type="number"
         onChange={(e) => setReps(e.target.value)}
         value={reps}
-        className={emptyFields.includes('reps') ? 'error' : ''}
+        className={emptyFields.includes('reps') ? 'error' : HomeCss['ps6']}
       />
+      
 
-      <button>Add Workout</button>
+      <button className={HomeCss['addRecipeBTN']}>Add Recipe</button>
       {error && <div className="error">{error}</div>}
     </form>
   )

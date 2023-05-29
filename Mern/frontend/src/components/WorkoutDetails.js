@@ -3,6 +3,7 @@ import { useAuthContext } from '../hooks/useAuthContext'
 
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import HomeCss from '../components/css/home.module.css'
 
 const WorkoutDetails = ({ workout }) => {
   const { dispatch } = useWorkoutsContext()
@@ -27,10 +28,10 @@ const WorkoutDetails = ({ workout }) => {
   }
 
   return (
-    <div className="workout-details">
+    <div className={HomeCss['workout-details']}>
       <h4>{workout.title}</h4>
-      <p><strong>Load (kg): </strong>{workout.load}</p>
-      <p><strong>Reps: </strong>{workout.reps}</p>
+      <p><strong>Cooking Time: </strong>{workout.load}</p>
+      <p><strong>Serving: </strong>{workout.reps}</p>
       <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
       <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
     </div>
