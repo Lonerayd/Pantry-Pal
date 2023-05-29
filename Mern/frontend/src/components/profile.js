@@ -54,6 +54,9 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+            <div>
+                <button>Submit</button>
+            </div>
         </div>
     );
 }

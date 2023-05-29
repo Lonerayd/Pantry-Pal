@@ -70,7 +70,7 @@ const Navbar = () => {
           </div>
           <ul className={NavCSS['nav-links']} ref={linksRef}>
             <li>Home</li>
-            <li>Our Foods</li>
+            <li><a href='#ourFoods'>Our Foods</a></li>
             <li><NavLink to="/OurStory" className={NavCSS['reactlink']}> Story </NavLink> </li>
             <li className={NavCSS['logo']}><img src={logo} alt='logo'></img></li>
             <li><NavLink to="/ContactUs" className={NavCSS['reactlink']}>Contact Us</NavLink> </li>
