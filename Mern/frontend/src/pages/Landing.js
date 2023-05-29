@@ -2,7 +2,7 @@
 
 import LandingBtnComp from "../components/LandBtn";
 import LandFirst from "../components/LandFirst";
-
+import Subscribe from "../components/Subscribe";
 const  Landing =() => {
 
 
@@ -10,7 +10,7 @@ const  Landing =() => {
     <div >
        <LandFirst/>
     <LandingBtnComp/>
-    
+    <Subscribe/>
     </div>
    
   )

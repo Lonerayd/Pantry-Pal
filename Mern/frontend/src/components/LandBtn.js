@@ -1,6 +1,6 @@
 import Land from './css/landing.module.css'
 import Footer from "./Footer"
-import Subscribe from './Subscribe'
+
 
 // images
 import LuzonImg1 from './images/luzonImages/L-poquipoqui.png'
@@ -124,7 +124,7 @@ const LandingBtnComp = () => {
         </section>
         </div>
       </main>
-      <Subscribe/>
+      
       
     </div>
   )

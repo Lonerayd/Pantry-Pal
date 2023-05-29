@@ -29,9 +29,9 @@ const useNavbarEffect = (NavCSS, user) => {
     };
 
     if (shouldApplyEffect!==null) {
-      return; // Skip the effect if the user is not logged in
+      return ; // Skip the effect if the user is not logged in
     }
-
+    
     handleScroll(); // Call the handleScroll function immediately
     document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
     document.addEventListener('click', handleClick);
