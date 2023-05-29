@@ -203,7 +203,7 @@
 
   }
   .p1 {
-    background-image: url(images/logoImages/Group\ 1.png);
+    background-image: url('../images/logoImages/Group\ 1.png');
     background-size: cover;
     height: 100svh;
     }
@@ -255,7 +255,7 @@
     color: aliceblue;
 }
 .bgImage {
-  background-image: url(images/logoImages/p2bg.png);
+  background-image: url(../images/logoImages/p2bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

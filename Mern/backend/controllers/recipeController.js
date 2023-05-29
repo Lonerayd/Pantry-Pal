@@ -1,7 +1,7 @@
 const Recipe = require('../models/recipeModel')
 const mongoose = require('mongoose')
 
-// get all workouts
+// get all recipes
 const getRecipes = async (req, res) => {
   const user_id = req.user._id
 
@@ -10,7 +10,7 @@ const getRecipes = async (req, res) => {
   res.status(200).json(recipes)
 }
 
-// get a single workout
+// get a single recipe
 const getRecipe = async (req, res) => {
   const { id } = req.params
 
@@ -28,20 +28,20 @@ const getRecipe = async (req, res) => {
 }
 
 
-// create new workout
+// create new recipe
 const createRecipe = async (req, res) => {
-  const {title, ingredients, reps} = req.body
+  const {title, ingredients, directions} = req.body
 
   let emptyFields = []
 
   if(!title) {
     emptyFields.push('title')
   }
-  if(!load) {
-    emptyFields.push('load')
+  if(!ingredients || ingredients.length <= 1) {
+    emptyFields.push('ingredients')
   }
-  if(!reps) {
-    emptyFields.push('reps')
+  if(!directions) {
+    emptyFields.push('directions')
   }
   if(emptyFields.length > 0) {
     return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
@@ -50,54 +50,60 @@ const createRecipe = async (req, res) => {
   // add doc to db
   try {
     const user_id = req.user._id
-    const workout = await Workout.create({title, load, reps, user_id})
-    res.status(200).json(workout)
+
+     // Map the ingredients array to include name and amount properties
+     const mappedIngredients = ingredients.map(ingredient => ({
+        name: ingredient.name,
+        amount: ingredient.amount
+      }));
+    const recipe = await Recipe.create({title, ingredients: mappedIngredients, directions, user_id})
+    res.status(200).json(recipe)
   } catch (error) {
     res.status(400).json({error: error.message})
   }
 }
 
-// delete a workout
-const deleteWorkout = async (req, res) => {
+// delete a recipe
+const deleteRecipe = async (req, res) => {
   const { id } = req.params
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(404).json({error: 'No such workout'})
+    return res.status(404).json({error: 'No such recipe'})
   }
 
-  const workout = await Workout.findOneAndDelete({_id: id})
+  const recipe = await Recipe.findOneAndDelete({_id: id})
 
-  if (!workout) {
-    return res.status(400).json({error: 'No such workout'})
+  if (!recipe) {
+    return res.status(400).json({error: 'No such recipe'})
   }
 
-  res.status(200).json(workout)
+  res.status(200).json(recipe)
 }
 
-// update a workout
-const updateWorkout = async (req, res) => {
+// update a recipe
+const updateRecipe = async (req, res) => {
   const { id } = req.params
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(404).json({error: 'No such workout'})
+    return res.status(404).json({error: 'No such recipe'})
   }
 
-  const workout = await Workout.findOneAndUpdate({_id: id}, {
+  const recipe = await Recipe.findOneAndUpdate({_id: id}, {
     ...req.body
   })
 
-  if (!workout) {
-    return res.status(400).json({error: 'No such workout'})
+  if (!recipe) {
+    return res.status(400).json({error: 'No such recipe'})
   }
 
-  res.status(200).json(workout)
+  res.status(200).json(recipe)
 }
 
 
 module.exports = {
-  getWorkouts,
-  getWorkout,
-  createWorkout,
-  deleteWorkout,
-  updateWorkout
+  getRecipes,
+  getRecipe,
+  createRecipe,
+  deleteRecipe,
+  updateRecipe
 }
