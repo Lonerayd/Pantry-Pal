@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRecipesContext } from "../hooks/useRecipesContext";
 import { useAuthContext } from "../hooks/useAuthContext";
+import HomeCss from '../components/css/home.module.css'
 
 const RecipeForm = () => {
   const { dispatch } = useRecipesContext();
@@ -63,7 +64,7 @@ const RecipeForm = () => {
   };
 
   return (
-    <form className="create" onSubmit={handleSubmit}>
+    <form className={HomeCss['secondForm']} onSubmit={handleSubmit}>
       <h3>Add a New Recipe</h3>
 
       <label>Recipe Title:</label>
@@ -100,7 +101,7 @@ const RecipeForm = () => {
           </button>
         </div>
       ))}
-      <button type="button" onClick={handleAddIngredient}>
+      <button  className={HomeCss['addRecipeBTN']} type="button" onClick={handleAddIngredient}>
         Add Ingredient
       </button>
 
@@ -111,7 +112,7 @@ const RecipeForm = () => {
         className={emptyFields.includes("directions") ? "error" : ""}
       />
 
-      <button>Add Recipe</button>
+      <button className={HomeCss['addRecipeBTN']}>Add Recipe</button>
       {error && <div className="error">{error}</div>}
     </form>
   );

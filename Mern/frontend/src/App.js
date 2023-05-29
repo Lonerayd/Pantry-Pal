@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Landing from './pages/Landing'
 import Footer from './components/Footer'
 import ContactUs from './pages/ContactUs'
+import Profile from './components/profile'
 
 
 import Story from './pages/OurStory'
@@ -40,6 +41,10 @@ function App() {
             <Route 
               path="/login" 
               element={!user ? <Login /> : <Navigate to="/" />} 
+            />
+            <Route 
+              path="/profile" 
+              element={!user ? <Login /> : <Profile/>} 
             />
             <Route 
               path="/signup" 

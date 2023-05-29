@@ -44,3 +44,32 @@
     font-size: 1.5rem;
     color: aliceblue;
 }
+.recipesReq {
+    background-color: blue;
+}
+.secondForm {
+    display: flex;
+    flex-direction: column;
+}
+.recipe-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addPointer {
+    cursor: pointer;
+    background-color: #970C10;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.placeHolderAdjust {
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+}
+@media (max-width: 768px) {
+    .placeHolderAdjust {
+        width: 200px;
+    }
+}
