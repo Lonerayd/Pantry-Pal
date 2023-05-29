@@ -1,0 +1,394 @@
+
+/* SIDEBAR */
+form{
+    text-align: left;
+    padding-left: 8px;
+}
+form label{
+    font-weight: 500;
+}
+form input{
+    height: 38px;
+    border-radius: 10px;
+    border-style: none;
+    border: 1px solid grey;
+}
+.log-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-danger{
+    background-color: #970c10;
+    border-color: #970c10;
+    margin-left: 40px;
+}
+.btn-danger:hover{
+    background-color: #970c10;
+}
+.welcome{
+    font-size: 25px;
+}
+
+
+
+/* CONTENT */
+
+/* NAVBAR */
+.d-flex{
+    gap: 10px;
+}
+.search-bar{
+    width: 350px;
+    border-radius: 20px;
+    height: 30px;
+    border-color: #970c10;
+}
+.search-button{
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-color: #970c10;
+    color: #970c10;
+}
+.search-button:hover{
+    background-color: #970c10;
+    border-color: #970c10;
+  }
+.btn{
+    margin-right: 40px;
+}
+.small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+hr{
+    margin: 0;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    color: #970c10;
+}
+.parent{
+  margin-left: 20px;
+}
+.parent div{
+    padding-top: 10px;
+}
+
+
+
+/* BOTTOM(under nav) */
+.bottom{
+    background-color: rgb(240, 240, 240);
+}
+  
+  /* .navbar-logo {
+   
+  } */
+  .navbar-toggle,
+  .sidebar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    border-radius: 1.5px;
+  }
+  
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  /* .sidebar-logo {
+    
+  } */
+  
+  .sidebar-menu {
+    padding: 20px;
+    list-style: none;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar.active + .sidebar-overlay {
+    display: block;
+  }
+
+
+.navs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.first{
+  padding: 3px;
+  padding-left: 4px;
+  margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* small */
+@media only screen and (max-width: 600px) {
+    /* SIDEBAR */
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f2f2f2;
+      }
+      
+      /* .navbar-logo {
+       
+      } */
+      .navbar-toggle,
+      .sidebar-toggle {
+        display: block;
+        cursor: pointer;
+      }
+      
+      .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        border-radius: 1.5px;
+      }
+      
+      .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        display: none;
+      }
+      
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        transition: left 0.3s ease-in-out;
+        z-index: 2;
+      }
+      
+      .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f2f2f2;
+      }
+      
+      /* .sidebar-logo {
+        
+      } */
+      
+      .sidebar-menu {
+        padding: 20px;
+        list-style: none;
+      }
+      
+      .sidebar-menu li {
+        margin-bottom: 10px;
+      }
+      
+      .sidebar-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+      }
+      
+      .sidebar.active {
+        left: 0;
+      }
+      
+      .sidebar.active + .sidebar-overlay {
+        display: block;
+      }
+    
+    
+    .navs{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+    /* .first{
+      padding: 3px;
+      padding-left: 4px;
+      margin: 0;
+    } */
+
+
+/* CONTENT */
+
+/* NAVBAR */
+/* .navbar{
+    padding-top: 10px;
+} */
+.d-flex{
+  width: 20px;
+padding: 0;
+position: absolute;
+left: 50px;
+}
+.search-bar{
+    width: 150px;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 30px;
+}
+.search-button{
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-color: #970c10;
+    color: #970c10;
+}
+.search-button:hover{
+  background-color: #970c10;
+  border-color: #970c10;
+  }
+.btn{
+    margin-right: 10px;
+}
+.small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 5px; */
+}
+/* .icon{
+    height: 25px;
+    width: 25px;
+} */
+hr{
+    margin: 0;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    color: red;
+}
+.parent div{
+    padding-top: 10px;
+}
+
+
+/* BOTTOM */
+.bottom{
+    background-color: rgb(240, 240, 240);
+}
+}
+
+.pen-icon {
+  height: 13px;
+  width: 13px;
+}
+
+.name {
+  text-indent: 20px;
+  height: 3rem;
+  width: 100%;
+}
+
+.number {
+  text-indent: 20px;
+  height: 3rem;
+  width: 100%;
+}
+
+.email {
+  text-indent: 20px;
+  height: 3rem;
+  width: 100%;
+}
+
+.address {
+  text-indent: 20px;
+  height: 3rem;
+  width: 100%;
+}
+
+.btnColor {
+  background-color: #970c10;
+  border-color: #970c10;
+  color: white;
+}
+
+.btnColor:hover {
+  background-color: #970c10;
+  border-color: #970c10;
+  color: white;
+}
