@@ -29,8 +29,8 @@ const getRecipe = async (req, res) => {
 
 
 // create new workout
-const createWorkout = async (req, res) => {
-  const {title, load, reps} = req.body
+const createRecipe = async (req, res) => {
+  const {title, ingredients, reps} = req.body
 
   let emptyFields = []
 
