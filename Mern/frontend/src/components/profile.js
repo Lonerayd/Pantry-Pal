@@ -19,7 +19,7 @@ const Profile = () => {
                         <img className="img-fluid rounded-5 bg-secondary-subtle" src={ProfilePic1}></img>
                     </div>
                     <div className="profile-img py-3 px-5 mx-2">
-                        <a href="#"><button className="btnColor btn"><span><img className="pen-icon img-fluid mb-1" src="images/icons/icon11.png"/></span> Change Picture</button></a>
+                        <a href="#"><button className="btnColor btn"><span><img className="pen-icon img-fluid mb-1" src={ProfilePic2}></img></span> Change Picture</button></a>
                     </div>
                 </div>
                 <div className="col-md-9">
