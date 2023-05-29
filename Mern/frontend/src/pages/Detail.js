@@ -1,6 +1,6 @@
 import Detailcomp from "../components/Detail";
-import Footer from "../components/Footer"
-const  Landing =() => {
+
+const  Detail =() => {
 
 
   return(
