@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import Detail from './css/detail.module.css';
-import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Dish from 'https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1458087071/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1637868215411.jpg';
 
@@ -8,12 +8,12 @@ import Dish from 'https://www.unileverfoodsolutions.com.ph/chef-inspiration/food
 const Detailcomp = () => {
 
   return (
-    <div className={`${Detail.container-fluid} ${Detail.first}`}>
+    <div className={`container-fluid ${Detail.first}`}>
   
       {/* <!-- CONTENT --> */}
-      <div className={`${Detail.col-lg-12} ${Detail.right}`}>
+      <div className={`col-lg-12 ${Detail.right}`}>
         <nav className={Detail['navbar']}>
-          <div className={`${Detail.container-fluid} ${Detail.navs}`}>
+          <div className={`container-fluid ${Detail.navs}`}>
             {/* <!-- <a className="navbar-brand"></a> --> */}
             <div>
               <div className={Detail['navbar-toggle']}>
@@ -48,10 +48,10 @@ const Detailcomp = () => {
 
 
             <form className={Detail['d-flex']} role="search">
-              <input className={`${Detail.form-control} ${Detail.me-2} ${Detail.search-bar}`} type="search" placeholder="Search" aria-label="Search"></input>
+              <input className={`form-control me-2 ${Detail.search-bar}`} type="search" placeholder="Search" aria-label="Search"></input>
               <button type="button" className={`${Detail.btn} ${Detail.btn-outline-danger} ${Detail.search-button}`}>Search</button>
               <div className={Detail['small']}>
-                <i className={`${Detail.fa-solid} ${Detail.fa-user} ${Detail.fa-xl}`} style="color: #970c10;"></i>
+                <i className="fa-solid fa-user fa-xl" style="color: #970c10;"></i>
               </div>
             </form>
           </div>
@@ -60,12 +60,12 @@ const Detailcomp = () => {
         {/* <!-- className PARENT??? --> */}
         <div className={Detail['parent']}>
           <div>
-            <i className={`${Detail.fa-solid} ${Detail.fa-arrow-left} ${Detail.fa-lg}`}></i>
+            <i className="fa-solid fa-arrow-left fa-lg"></i>
             <strong>Salmon Belly Sinigang with Miso</strong>
             {/* <!-- <span>|</span><b> Add New Recipes</b><br>
             <p>8 recipes</p> --> */}
           </div>
-          <div className={Detail['filter-button']}>
+          <div className="filter-button">
             <button type="button" className={`${Detail.btn} ${Detail.btn-outline-danger} ${Detail.search-button}`}>
                 Share
             </button>
@@ -75,22 +75,22 @@ const Detailcomp = () => {
         <hr/>
 
 
-        <div className={`${Detail.container-fluid} ${Detail.bottom}`}>
-          <div className={Detail['row']}>
-            <div className={`${Detail.col-lg-6} ${Detail.col-md-12}`}>
-              <div className={`${Detail.card} ${Detail.col-md-12}`}>
+        <div className={`container-fluid ${Detail.bottom}`}>
+          <div className="row">
+            <div className="col-lg-6 col-md-12">
+              <div className={`${Detail.card} col-md-12`}>
                 <img src={Dish} className={Detail['card-img-top']} alt="..." height="326px"></img>
                 <div className={Detail['card-body']}>
                   <p className={Detail['card-text']}>
                     <div className={Detail['top']}>
                       <div className={Detail['time']}>
-                        <i className={`${Detail.fa-solid} ${Detail.fa-clock}`} style="color: #970c10;"></i>30 minutes &nbsp;
-                        <i className={`${Detail.fa-solid} ${Detail.fa-mortar-pestle}`} style="color: #970c10;"></i>13 ingredients
+                        <i className="fa-solid fa-clock" style="color: #970c10;"></i>30 minutes &nbsp;
+                        <i className="fa-solid fa-mortar-pestle" style="color: #970c10;"></i>13 ingredients
                       </div>
-                      <div className={Detail['modify']}>
-                        <i className={`${Detail.fa-solid} ${Detail.fa-pen}`} style="color: #970c10;"></i>Edit &nbsp;
-                        <i className={`${Detail.fa-solid} ${Detail.fa-trash}`} style="color: #970c10;"></i>Delete &nbsp;
-                        <i className={`${Detail.fa-solid} ${Detail.fa-ellipsis-vertical}`} style="color: #970c10;"></i>More
+                      <div className="modify">
+                        <i className="fa-solid fa-pen" style="color: #970c10;"></i>Edit &nbsp;
+                        <i className="fa-solid fa-trash" style="color: #970c10;"></i>Delete &nbsp;
+                        <i className="fa-solid fa-ellipsis-vertical" style="color: #970c10;"></i>More
                       </div>
                     </div>
                     <br/>
@@ -138,8 +138,8 @@ const Detailcomp = () => {
                     </div>
                     <br/>
                   </div>
-                  <p className={Detail['list']}>
-                    <table className={`${Detail.table} ${Detail.table-borderless}`}>
+                  <p className="list">
+                    <table className="table table-borderless">
                       <tbody>
                         <tr>
                           <td>262.50g</td>
