@@ -25,6 +25,9 @@
     width: 80%;
     margin: auto;
 }
+.metaTag h2 {
+    font-size: 4rem;
+}
 .toClick {
     display: flex;
     justify-content:space-evenly;
@@ -36,25 +39,42 @@
     align-content: center;
 }
 .toClickBtnLeft {
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 60px;
     background: rgba(151, 12, 16, 0.4);
     border: 1px solid #F9F9F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100px;
     color: aliceblue;
+    font-size: 1.5rem;
 }
 .toClickBtnRight {
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 60px;
     background: rgba(151, 12, 16, 0.4);
     border: 1px solid #F9F9F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100px;
     color: aliceblue;
+    font-size: 1.5rem;
 }
 .bgImage {
   background-image: url('../images/logoImages/p2bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 768px) {
+    .metaTag h2 {
+        font-size: 1.8rem;
+        padding-top: 20px;
+       
+    }
+    .toClickBtnLeft {
+        width: 100px;
+        font-size: 1rem;
+    }
+    .toClickBtnRight {
+        width: 100px;
+        font-size: 1rem;
+    }
 }
