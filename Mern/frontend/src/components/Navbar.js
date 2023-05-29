@@ -27,7 +27,36 @@ const Navbar = () => {
         <div id="logusernav">
           <span>{user.email}</span>
           <button onClick={handleClick}>Log out</button>
-         
+          <nav class="navbar">
+        <div class="navbar-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="navbar-logo">
+        
+        </div>
+        <div class="sidebar-overlay"></div>
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <div class="sidebar-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="sidebar-logo">
+             
+            </div>
+          </div>
+          <ul class="sidebar-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+                
         </div>
       )}
       {!user && (
