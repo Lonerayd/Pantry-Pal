@@ -8,7 +8,12 @@ import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Landing from './pages/Landing'
 import Footer from './components/Footer'
+import ContactUs from './pages/ContactUs'
+
+
 import Story from './pages/OurStory'
+import './index.css'
+
 function App() {
   const { user } = useAuthContext()
 
@@ -40,6 +45,11 @@ function App() {
               path="/signup" 
               element={!user ? <Signup /> : <Navigate to="/" />} 
             />
+            <Route
+              path="/ContactUs"
+              element={!user ? <ContactUs /> : <Navigate to="/" />} 
+            />
+
 
           </Routes>
         </div>

@@ -43,7 +43,7 @@ const Navbar = () => {
             <li>Our Foods</li>
             <li><NavLink to="/OurStory" className={NavCSS['reactlink']}> Story </NavLink> </li>
             <li className={NavCSS['logo']}><img src={logo} alt='logo'></img></li>
-            <li>Contact Us</li>
+            <li><NavLink to="/ContactUs" className={NavCSS['reactlink']}>Contact Us</NavLink> </li>
             <li><NavLink to="/login" className={NavCSS['reactlink']}> Login</NavLink></li>
             <li><NavLink to="/signup" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
           </ul>

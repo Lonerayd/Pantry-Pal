@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.home {
+    background-color: blanchedalmond;
+    /* display: flex;
+    justify-content: center; */
+}
+.search-recipe {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 20px;
+}
+.search-bar {
+    width: 500px;
+    padding: 70px;
+}
+.add-recipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workOut {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+    gap: 30px;
+}
+.workout-details {
+    
+}
+.adjustHere {
+    display: flex;
+    flex-direction: column;
+}
+.addRecipeBTN {
+    background-color: #970C10;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
