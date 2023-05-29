@@ -37,9 +37,14 @@ const createRecipe = async (req, res) => {
   if(!title) {
     emptyFields.push('title')
   }
-  if(!ingredients || ingredients.length <= 1) {
-    emptyFields.push('ingredients')
-  }
+  ingredients.forEach((ingredient, index) => {
+    if (!ingredient.name || ingredient.name.trim() === "") {
+      emptyFields.push(`ingredients[${index}].name`);
+    }
+    if (!ingredient.amount) {
+      emptyFields.push(`ingredients[${index}].amount`);
+    }
+  });
   if(!directions) {
     emptyFields.push('directions')
   }
