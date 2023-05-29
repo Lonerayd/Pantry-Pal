@@ -29,7 +29,7 @@
 }
 .meal-header{
     position: absolute;
-    top: 1445px;
+    top: 1330px;
     left: 140px;
     font-size: 50px;
 }
@@ -256,8 +256,8 @@ button:hover{
 
 
 
-/* MEDIA QUERY (SMALL) */
-@media only screen and (max-width: 667px){
+/* MEDIA QUERY (MEDIUM) */
+@media only screen and (max-width: 1024px){
     *{
         margin: 0;
     
@@ -289,8 +289,8 @@ button:hover{
     }
     .meal-header{
         position: absolute;
-        top: 1445px;
-        left: 140px;
+        top: 2220px;
+        left: 60px;
         font-size: 50px;
     }
     /* .plan{
@@ -304,7 +304,7 @@ button:hover{
     }
     .red{
         padding-left: 20px;
-        padding-top: 230px;
+        padding-top: 130px;
         color: white;
         font-size: 19px;
         text-align: center;
@@ -376,7 +376,7 @@ button:hover{
     }
     .meal-header{
         position: absolute;
-        top: 1415px;
+        top: 1300px;
         left: 60px;
         font-size: 45px;
         color: black;
@@ -392,7 +392,7 @@ button:hover{
     }
     .red{
         padding-left: 8px;
-        padding-top: 1120px;
+        padding-top: 1110px;
         color: black;
         font-size: 19px;
         text-align: center;
