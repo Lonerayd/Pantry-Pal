@@ -1,30 +1,61 @@
-import NavCSS from './css/nav.module.css'
-import logo from './images/logo.png'
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import { NavLink } from 'react-router-dom'
-import { useEffect } from 'react'
-import { applyNavScript } from '../hooks/navscript'
-export default function NavUser(){
-    
-    return (
-        <nav className={NavCSS.navbar}>
-        <div className={NavCSS.burger}>
-            <i className="fa-solid fa-bars"></i>
-            
-        </div>
-        <div className={NavCSS['mobile-logo']}>
-            <img src={logo} alt='logo'></img>
-        </div>
-        <ul className={NavCSS['nav-links']}>
-            <li>Home</li>
-            <li>Our Foods</li>
-            <li>Story</li>
-          <li className={NavCSS.logo}><img src={logo} alt='logo'></img></li>
-          <li>Contact Us</li>
-          <li><NavLink to="/login" className={NavCSS['reactlink']}> Login</NavLink></li>
-          <li><NavLink to="/signup" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
-        </ul>
-        </nav>
-    )
-  
+import React, { useState, useEffect } from 'react';
+import ReactShadowRoot from 'react-shadow-root';
+
+const styles = `:host {
+  display: inline-flex;
 }
+span {
+  background-color: #333;
+  border-radius: 3px;
+  color: #fff;
+  padding: 1px 5px;
+}
+button {
+  background-color: #fff;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: 0;
+  padding: 10px;
+}
+button:active {
+  background-color: #333;
+  color: #fff;
+}
+button,
+span {
+  margin: 0 2px;
+}`;
+
+const Demo1 = () => {
+  const [cnt, setCnt] = useState(0);
+
+  const increment = () => {
+    setCnt(prevCnt => prevCnt + 1);
+  };
+
+  useEffect(() => {
+    const basicDemoElement = document.querySelector('basic-demo');
+    if (basicDemoElement) {
+      // Perform additional actions if the element is present
+    }
+  }, []);
+
+  if (document.querySelector('basic-demo')) {
+    return null; // Return null if <basic-demo> element is present
+  }
+
+  return (
+    <basic-demo>
+      {/* The shadow root will be attached to this element */}
+      <ReactShadowRoot>
+        <style>{styles}</style>
+        <span>{cnt}</span>
+        <p>hello</p>
+        <button onClick={increment}>Click Me</button>
+      </ReactShadowRoot>
+    </basic-demo>
+  );
+};
+
+export default Demo1;

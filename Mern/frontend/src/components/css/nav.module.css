@@ -5,7 +5,9 @@
   }
   
  
-
+.root{
+  width: 100px !important;
+}
   
   .nav-links {
     display: flex;
