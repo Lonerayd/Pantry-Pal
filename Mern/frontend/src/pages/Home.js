@@ -7,6 +7,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import '../index.css'
 import RecipeDetails from '../components/RecipeDetails';
 import RecipeForm from '../components/RecipeForm';
+import HomeCss from '../components/css/home.module.css'
 
 const Home = () => {
   const { recipes, dispatch } = useRecipesContext();
@@ -63,9 +64,11 @@ const Home = () => {
   const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
 
   return (
-    <div className="home">
-      <div className="search-bar">
-        <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search recipes" />
+    <div className={HomeCss['home']}>
+      <div className={HomeCss['search-recipe']}>
+        <div className={HomeCss['search-bar']}>
+          <input className={HomeCss['placeHolderAdjust']} type="text" value={searchQuery} onChange={handleSearch} placeholder="Search recipes"/>
+        </div>
       </div>
       <div className="recipes">
         {currentRecipes.map((recipe) => (
@@ -84,7 +87,9 @@ const Home = () => {
           </button>
         ))}
       </div>
+      <div className={HomeCss['workOut']}>
       <RecipeForm />
+      </div>
     </div>
   );
 };

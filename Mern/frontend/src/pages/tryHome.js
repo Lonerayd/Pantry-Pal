@@ -95,7 +95,9 @@ const Home = () => {
         </div>
       </div>
       <div className={HomeCss['workOut']}>
+        <div>
         <WorkoutForm />
+        </div>
       </div>
     </div>
   );

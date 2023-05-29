@@ -1,5 +1,6 @@
 import { useRecipesContext } from '../hooks/useRecipesContext';
 import { useAuthContext } from '../hooks/useAuthContext';
+import HomeCss from '../components/css/home.module.css'
 
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
@@ -27,7 +28,7 @@ const RecipeDetails = ({ recipe }) => {
   };
 
   return (
-    <div className="recipe-details">
+    <div className={HomeCss['recipe-details']}>
       <h4>{recipe.title}</h4>
       <ul>
         {recipe.ingredients.map((ingredient) => (
@@ -38,7 +39,7 @@ const RecipeDetails = ({ recipe }) => {
       </ul>
       <p>{recipe.directions}</p>
       <p>{formatDistanceToNow(new Date(recipe.createdAt), { addSuffix: true })}</p>
-      <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+      <span className={`material-symbols-outlined ${true ? HomeCss.addPointer : ''}`} onClick={handleClick}>delete</span>
     </div>
   );
 };
