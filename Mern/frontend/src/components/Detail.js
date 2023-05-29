@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import Detail from './css/detail.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/detail.css';
+
 
 import Dish from 'https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1458087071/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1637868215411.jpg';
 
@@ -8,35 +8,35 @@ import Dish from 'https://www.unileverfoodsolutions.com.ph/chef-inspiration/food
 const Detailcomp = () => {
 
   return (
-    <div className={`container-fluid ${Detail.first}`}>
+    <div className="container-fluid first">
   
       {/* <!-- CONTENT --> */}
-      <div className={`col-lg-12 ${Detail.right}`}>
-        <nav className={Detail['navbar']}>
-          <div className={`container-fluid ${Detail.navs}`}>
+      <div className="col-lg-12 right">
+        <nav className="navbar">
+          <div className="container-fluid navs">
             {/* <!-- <a className="navbar-brand"></a> --> */}
             <div>
-              <div className={Detail['navbar-toggle']}>
-                <div className={Detail['bar']}></div>
-                <div className={Detail['bar']}></div>
-                <div className={Detail['bar']}></div>
+              <div className="navbar-toggle">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
               </div>
-              <div className={Detail['navbar-logo']}>
+              <div className="navbar-logo">
                 {/* <!-- Your logo or brand name goes here --> */}
               </div>
-              <div className={Detail['sidebar-overlay']}></div>
-              <div className={Detail['sidebar']}>
-                <div className={Detail['sidebar-header']}>
-                  <div className={Detail['sidebar-toggle']}>
-                    <div className={Detail['bar']}></div>
-                    <div className={Detail['bar']}></div>
-                    <div className={Detail['bar']}></div>
+              <div className="sidebar-overlay"></div>
+              <div className="sidebar">
+                <div className="sidebar-header">
+                  <div className="sidebar-toggle">
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
                   </div>
-                  <div className={Detail['sidebar-logo']}>
+                  <div className="sidebar-logo">
                     {/* <!-- Your logo or brand name goes here --> */}
                   </div>
                 </div>
-                <ul className={Detail['sidebar-menu']}>
+                <ul className="sidebar-menu">
                   <li><NavLink  to="/">Home</NavLink></li>
                   <li><NavLink  to="/">My recipes</NavLink></li>
                   <li><NavLink  to="/">Saved recipes</NavLink></li>
@@ -47,10 +47,10 @@ const Detailcomp = () => {
 
 
 
-            <form className={Detail['d-flex']} role="search">
-              <input className={`form-control me-2 ${Detail.search-bar}`} type="search" placeholder="Search" aria-label="Search"></input>
-              <button type="button" className={`${Detail.btn} ${Detail.btn-outline-danger} ${Detail.search-button}`}>Search</button>
-              <div className={Detail['small']}>
+            <form className="d-flex" role="search">
+              <input className="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search"></input>
+              <button type="button" className="btn btn-outline-danger search-button">Search</button>
+              <div className="small">
                 <i className="fa-solid fa-user fa-xl" style="color: #970c10;"></i>
               </div>
             </form>
@@ -58,7 +58,7 @@ const Detailcomp = () => {
         </nav>
         <hr/>
         {/* <!-- className PARENT??? --> */}
-        <div className={Detail['parent']}>
+        <div className="parent">
           <div>
             <i className="fa-solid fa-arrow-left fa-lg"></i>
             <strong>Salmon Belly Sinigang with Miso</strong>
@@ -66,7 +66,7 @@ const Detailcomp = () => {
             <p>8 recipes</p> --> */}
           </div>
           <div className="filter-button">
-            <button type="button" className={`${Detail.btn} ${Detail.btn-outline-danger} ${Detail.search-button}`}>
+            <button type="button" className="btn btn-outline-danger search-button">
                 Share
             </button>
           </div>
@@ -75,15 +75,15 @@ const Detailcomp = () => {
         <hr/>
 
 
-        <div className={`container-fluid ${Detail.bottom}`}>
+        <div className="container-fluid bottom">
           <div className="row">
             <div className="col-lg-6 col-md-12">
-              <div className={`${Detail.card} col-md-12`}>
-                <img src={Dish} className={Detail['card-img-top']} alt="..." height="326px"></img>
-                <div className={Detail['card-body']}>
-                  <p className={Detail['card-text']}>
-                    <div className={Detail['top']}>
-                      <div className={Detail['time']}>
+              <div className="card col-md-12">
+                <img src={Dish} className="card-img-top" alt="..." height="326px"></img>
+                <div className="card-body">
+                  <p className="card-text">
+                    <div className="top">
+                      <div className="time">
                         <i className="fa-solid fa-clock" style="color: #970c10;"></i>30 minutes &nbsp;
                         <i className="fa-solid fa-mortar-pestle" style="color: #970c10;"></i>13 ingredients
                       </div>
@@ -95,8 +95,8 @@ const Detailcomp = () => {
                     </div>
                     <br/>
                     <hr/>
-                    <div className={Detail['inst']}>
-                      <p className={Detail['inst-header']}>
+                    <div className="inst">
+                      <p className="inst-header">
                         <br/>
                         Directions
                       </p>
@@ -118,21 +118,21 @@ const Detailcomp = () => {
             </div>
 
             {/* <!-- INGREDIENTS --> */}
-            <div className={`${Detail.col} ${Detail.ing-column}`}>
-              <div className={Detail['card']}>
-                <div className={Detail['card-body']}>
-                  <p className={Detail['ings-header']}>
+            <div className="col ing-column">
+              <div className="card">
+                <div className="card-body">
+                  <p className="ings-header">
                     Ingredients
                   </p>
-                  <div className={Detail['serving']}>
+                  <div className="serving">
                     <label for="points">
                       <br/>
                       {/* <!-- 3 servings --> */}
                     </label><br/>
-                    <div className={Detail['prog']}>
+                    <div className="prog">
                       3 servings
-                      <div className={Detail['progress']} role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                        <div className={Detail['progress-bar']} style="width: 30%">
+                      <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div className="progress-bar" style="width: 30%">
                         </div>
                       </div>
                     </div>
