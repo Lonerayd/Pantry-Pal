@@ -6,7 +6,7 @@ import NavCSS from './css/nav.module.css';
 import logo from './images/logo.png';
 import { useState, useEffect } from 'react';
 import useNavbarEffect from '../hooks/navscript';
-import Demo1 from './NavUser';
+
 
 const Navbar = () => {
   const { logout } = useLogout();
