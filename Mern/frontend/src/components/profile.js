@@ -1,6 +1,7 @@
 import React from 'react';
-import Profile from './css/profile.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Prof from './css/profile.module.css';
+import ProfilePic1 from '../components/images/icons/profileIcon.png' 
+import ProfilePic2 from './images/icons/icon11.png' 
 
 const Profile = () => {
     return (
@@ -15,7 +16,7 @@ const Profile = () => {
             <div className="row">
                 <div className="col-md-3">
                     <div className="pt-3 px-5">
-                        <img className="img-fluid rounded-5 bg-secondary-subtle" src="images/icons/profile icon.png" />
+                        <img className="img-fluid rounded-5 bg-secondary-subtle" src={ProfilePic1}></img>
                     </div>
                     <div className="profile-img py-3 px-5 mx-2">
                         <a href="#"><button className="btnColor btn"><span><img className="pen-icon img-fluid mb-1" src="images/icons/icon11.png"/></span> Change Picture</button></a>
