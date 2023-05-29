@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import Detail from './css/detail.module.css'
-import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
+
+import Dish from 'https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1458087071/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1637868215411.jpg' 
 
 const Detailcomp = () => {
 
@@ -76,7 +78,7 @@ const Detailcomp = () => {
           <div className={Detail['row']}>
             <div className={`${Detail.col-lg-6} ${Detail.col-md-12}`}>
               <div className={`${Detail.card} ${Detail.col-md-12}`}>
-                <img src="https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1458087071/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1637868215411.jpg" className={Detail['card-img-top']} alt="..." height="326px"></img>
+                <img src={Dish} className={Detail['card-img-top']} alt="..." height="326px"></img>
                 <div className={Detail['card-body']}>
                   <p className={Detail['card-text']}>
                     <div className={Detail['top']}>
