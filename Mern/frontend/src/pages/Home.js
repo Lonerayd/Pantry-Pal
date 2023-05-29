@@ -1,60 +1,55 @@
-
-
-
-
-
 import { useState, useEffect } from 'react';
-import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
+import { useRecipesContext } from '../hooks/useRecipesContext';
 import { useAuthContext } from '../hooks/useAuthContext';
 
 // import '../components/css/addrecipe.css'
 // components
-import WorkoutDetails from '../components/WorkoutDetails';
-import WorkoutForm from '../components/WorkoutForm';
-import HomeCss from '../components/css/home.module.css'
+import '../index.css'
+import RecipeDetails from '../components/RecipeDetails';
+import RecipeForm from '../components/RecipeForm';
 
 const Home = () => {
-  const { workouts, dispatch } = useWorkoutsContext();
+  const { recipes, dispatch } = useRecipesContext();
   const { user } = useAuthContext();
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredWorkouts, setFilteredWorkouts] = useState([]);
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const workoutsPerPage = 2; // Number of workouts to display per page
+  const recipesPerPage = 2; // Number of recipes to display per page
 
   useEffect(() => {
-    const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts', {
+    const fetchRecipes = async () => {
+      const response = await fetch('/api/recipes', {
         headers: { 'Authorization': `Bearer ${user.token}` },
       });
       const json = await response.json();
 
       if (response.ok) {
-        dispatch({ type: 'SET_WORKOUTS', payload: json });
+        dispatch({ type: 'SET_RECIPES', payload: json });
       }
     };
 
     if (user) {
-      fetchWorkouts();
+      fetchRecipes()
     }
-  }, [dispatch, user]);
+  }, [dispatch, user])
 
   useEffect(() => {
-    // Filter workouts based on the search query
-    const filtered = workouts
-      ? workouts.filter((workout) => {
-          const title = workout.title.toLowerCase();
+    // Filter recipes based on the search query
+    const filtered = recipes
+      ? recipes.filter((recipe) => {
+          const title = recipe.title.toLowerCase();
           return title.includes(searchQuery.toLowerCase());
         })
       : [];
 
-    setFilteredWorkouts(filtered);
+    setFilteredRecipes(filtered);
     setCurrentPage(1); // Reset the current page to the first page
-  }, [workouts, searchQuery]);
+  }, [recipes, searchQuery]);
 
   // Pagination
-  const indexOfLastWorkout = currentPage * workoutsPerPage;
-  const indexOfFirstWorkout = indexOfLastWorkout - workoutsPerPage;
-  const currentWorkouts = filteredWorkouts.slice(indexOfFirstWorkout, indexOfLastWorkout);
+  const indexOfLastRecipe = currentPage * recipesPerPage;
+  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+  const currentRecipes = filteredRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
@@ -65,38 +60,31 @@ const Home = () => {
   };
 
   // Calculate total number of pages
-  const totalPages = Math.ceil(filteredWorkouts.length / workoutsPerPage);
+  const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
 
   return (
-    <div className={HomeCss['home']}>
-      <div className={HomeCss['search-recipe']}>
-        <div className={HomeCss['search-bar']}>
-          <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search recipes" style={{ width: '500px', padding: '10px', borderRadius: '20px'}}/>
-        </div>
+    <div className="home">
+      <div className="search-bar">
+        <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search recipes" />
       </div>
-      <div className={HomeCss['add-recipe']}>
-        <div className={HomeCss['workouts']}>
-          {currentWorkouts.map((workout) => (
-            <WorkoutDetails key={workout._id} workout={workout} />
-          ))}
-        </div>
-      
-        {/* Pagination */}
-        <div className={HomeCss['pagination']}>
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index + 1}
-              onClick={() => handlePageChange(index + 1)}
-              className={currentPage === index + 1 ? 'active' : ''}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
+      <div className="recipes">
+        {currentRecipes.map((recipe) => (
+          <RecipeDetails key={recipe._id} recipe={recipe} />
+        ))}
       </div>
-      <div className={HomeCss['workOut']}>
-        <WorkoutForm />
+      {/* Pagination */}
+      <div className="pagination">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageChange(index + 1)}
+            className={currentPage === index + 1 ? 'active' : ''}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
+      <RecipeForm />
     </div>
   );
 };
