@@ -30,12 +30,21 @@ const useNavbarEffect = (NavCSS, user) => {
       const userNav = userNavRef.current;
       const userSide = userSideRef;
       const targetElement = event.target;
+
+      
       if (!burger.contains(targetElement)) {
         links.classList.remove(NavCSS.show);
-        userNav.classList.remove()
+        
       }
       if (burger.contains(targetElement)) {
         links.classList.toggle(NavCSS.show);
+      }
+      if (!userNav.contains(targetElement)) {
+        userSide.classList.remove(NavCSS.show);
+        
+      }
+      if (userNav.contains(targetElement)) {
+        userSide.classList.toggle(NavCSS.show);
       }
     };
 
