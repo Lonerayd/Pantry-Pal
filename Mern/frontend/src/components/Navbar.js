@@ -6,7 +6,7 @@ import NavCSS from './css/nav.module.css';
 import logo from './images/logo.png';
 import { useState, useEffect } from 'react';
 import useNavbarEffect from '../hooks/navscript';
-
+import useuserNavEffect from '../hooks/userscript';
 import useScrollToSection from '../hooks/scrollTo';
 import  './css/addrecipe.css';
 
@@ -22,8 +22,9 @@ const Navbar = () => {
     logout();
   };
 
-  const { navbarRef, burgerRef, linksRef, userNavRef,userSideRef} = useNavbarEffect(NavCSS, user);
+  const { navbarRef, burgerRef, linksRef, } = useNavbarEffect(NavCSS, user);
    const {foodsRef}=  useScrollToSection(user);
+   const {userNavRef, userSideRef}=useuserNavEffect(user);
   
   
 
@@ -39,25 +40,24 @@ const Navbar = () => {
     <header>
       {user && (
          <div className="col-lg-12 right">
+          
          <nav className="navbaruser"ref={userNavRef}>
-         <NavLink to="/" activeclassname="selected" className={NavCSS['reactlink']}> Home </NavLink>
-         <NavLink to="/profile" activeclassname="selected" className={NavCSS['reactlink']}> Profile </NavLink>
-         <span>{user.email}</span>
-          <button onClick={handleClick}>Log out</button>
+         <div className="navbar-toggle">
+                   <div className="bar"></div>
+                   <div className="bar"></div>
+                   <div className="bar"></div>
+                 </div>
+         
     
              <div className="container-fluid navs">
              <a className="navbar-brand"></a> 
                <div>
-                 <div className="navbar-toggle">
-                   <div className="bar"></div>
-                   <div className="bar"></div>
-                   <div className="bar"></div>
-                 </div>
+                
                  <div className="navbar-logo">
                
                  </div>
                 
-                 <div className="sidebar">
+                 <div className="sidebar" ref={userSideRef}>
                    <div className="sidebar-header">
                      <div className="sidebar-toggle">
                        <div className="bar"></div>
@@ -68,8 +68,13 @@ const Navbar = () => {
                       
                      </div>
                    </div>
-                   <ul className="sidebar-menu" ref={userSideRef}>
-                     <li><a href="#">Home</a></li>
+                   <ul className="sidebar-menu" >
+                  
+        
+         <span className='reset usernav-links'>{user.email}</span>
+          <button onClick={handleClick}>Log out</button>
+                    
+                     <li> <NavLink to="/" activeclassname="selected" className={NavCSS['reactlink']}> Home </NavLink></li>
                      <li><a href="#">My recipes</a></li>
                      <li><a href="#">Saved recipes</a></li>
                      <li><a href="#">Meal planner</a></li>
@@ -85,7 +90,7 @@ const Navbar = () => {
                  <input className="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search"/>
                  <button type="button" className="btn btn-outline-danger search-button" >Search</button>
                  <div className="small">
-                   <i className="fa-solid fa-user fa-xl" ></i>
+                 <NavLink to="/profile" activeclassname="selected" className={NavCSS['reactlink']}>   <i className="fa-solid fa-user fa-xl" ></i> </NavLink>
                  </div>
                </form>
              </div>

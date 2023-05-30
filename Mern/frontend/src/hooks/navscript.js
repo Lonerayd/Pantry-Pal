@@ -42,11 +42,11 @@ const useNavbarEffect = (NavCSS, user) => {
      
     };
 
-    
-    document.addEventListener('click', handleClick);
     if (shouldApplyEffect!==null) {
       return ; // Skip the effect if the user is not logged in
     }
+    document.addEventListener('click', handleClick);
+    
     
     handleScroll(); // Call the handleScroll function immediately
     document.addEventListener('scroll', handleScroll); // Attach event listener for scroll events
@@ -59,7 +59,7 @@ const useNavbarEffect = (NavCSS, user) => {
     };
   }, [user]); // Add user as a dependency to reapply the effect when it changes
 
-  return { navbarRef, burgerRef, linksRef, userNavRef,userSideRef };
+  return { navbarRef, burgerRef, linksRef};
 };
 
 export default useNavbarEffect;

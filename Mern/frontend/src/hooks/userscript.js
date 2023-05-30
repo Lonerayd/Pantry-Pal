@@ -1,31 +1,39 @@
 import { useEffect, useRef } from 'react';
 import { useAuthContext } from './useAuthContext';
 import { useLocation } from 'react-router-dom';
-const useEffect = ( user) => {
- const linksRef = useRef(null);
- const userNavRef =useRef(null);
-  const userSideRef=useRef(null);
- useEffect(() => {
+
+const useUserNavEffect = (user) => {
+  const linksRef = useRef(null);
+  const userNavRef = useRef(null);
+  const userSideRef = useRef(null);
+
+  useEffect(() => {
     const shouldApplyEffect = user;
-  const userNav = userNavRef.current;
-      const userSide = userSideRef;
+    const handleClick = (event) => {
+      const userNav = userNavRef.current;
+      const userSide = userSideRef.current;
       const targetElement = event.target;
 
-      
-    
       if (!userNav.contains(targetElement)) {
-        userSide.classList.remove(".show");
-        
+        userSide.classList.toggle("active");
       }
+
       if (userNav.contains(targetElement)) {
-        userSide.classList.toggle(".show");
+        userSide.classList.toggle("active");
       }
- document.addEventListener('click', handleClick);
- return () => {
-document.removeEventListener('click', handleClick);
-  };
+    };
+
+    if (shouldApplyEffect==null) {
+        return ; // Skip the effect if the user is not logged in
+      }
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
   }, [user]);
- return {  linksRef, userNavRef,userSideRef };
+
+  return { linksRef, userNavRef, userSideRef };
 };
 
-export default userEffect;
+export default useUserNavEffect;
