@@ -20,9 +20,14 @@
     height: 100%;
     z-index: 2;
     position: relative;
+    
   }
-  
-  
+  .nav-links li {
+    cursor: pointer;
+  }
+  ul {
+    margin-bottom: 0;
+  }
   
 .logo{
   height: 100%;
@@ -41,6 +46,7 @@
   display: none;
  
 }
+
   ul li {
    
     color: inherit;
@@ -207,3 +213,8 @@
     color: inherit;
     text-decoration: none;
   }
+ 
+  .nav-links a {
+    all: unset;
+  }
+  

@@ -18,7 +18,7 @@ const Subscribe = () => {
                         Budget-wise ◈
                         Personalized<br></br>
                     <br></br>
-                    <label for="email">Email:</label>
+                    <label htmlFor="email">Email:</label>
                     <input type="email" name="email" placeholder="Type your email" required></input><br></br>
                     <br></br>
                     <button><b>Get Premium</b></button>

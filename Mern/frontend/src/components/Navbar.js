@@ -6,59 +6,86 @@ import NavCSS from './css/nav.module.css';
 import logo from './images/logo.png';
 import { useState, useEffect } from 'react';
 import useNavbarEffect from '../hooks/navscript';
-import UserNavCSS from './css/userNav.module.css'
+
+import useScrollToSection from '../hooks/scrollTo';
+import  './css/addrecipe.css';
 
 
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
+  
+
+
   const handleClick = () => {
     logout();
   };
 
-  const { navbarRef, burgerRef, linksRef } = useNavbarEffect(NavCSS, user);
+  const { navbarRef, burgerRef, linksRef,userNavRef, userSideRef} = useNavbarEffect(NavCSS, user);
+   const {foodsRef}=  useScrollToSection(user);
+  
+  
 
 
- 
+  
+
+
+  
+
+
 
   return (
     <header>
       {user && (
-        <div id="logusernav">
-          <span>{user.email}</span>
-          <button onClick={handleClick}>Log out</button>
-          <nav className={["navbar"]}>
-        <div className={UserNavCSS["navbar-toggle"]}>
-          <div className={UserNavCSS["bar"]}></div>
-          <div className={UserNavCSS["bar"]}></div>
-          <div className={UserNavCSS["bar"]}></div>
-        </div>
-        <div className={UserNavCSS["navbar-logo"]}>
-        
-        </div>
-        <div className={UserNavCSS["sidebar-overlay"]}></div>
-        <div className={UserNavCSS["sidebar"]}>
-          <div className={UserNavCSS["sidebar-header"]}>
-            <div className={UserNavCSS["sidebar-toggle"]}>
-              <div className={UserNavCSS["bar"]}></div>
-              <div className={UserNavCSS["bar"]}></div>
-              <div className={UserNavCSS["bar"]}></div>
-            </div>
-            <div className={UserNavCSS["sidebar-logo"]}>
-             
-            </div>
-          </div>
-          <ul className={UserNavCSS["sidebar-menu"]}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+         <div className="col-lg-12 right">
+         <nav className="navbaruser"ref={userNavRef}>
+             <div className="container-fluid navs">
+             <a className="navbar-brand"></a> 
+               <div>
+                 <div className="navbar-toggle">
+                   <div className="bar"></div>
+                   <div className="bar"></div>
+                   <div className="bar"></div>
+                 </div>
+                 <div className="navbar-logo">
+               
+                 </div>
                 
-        </div>
+                 <div className="sidebar">
+                   <div className="sidebar-header">
+                     <div className="sidebar-toggle">
+                       <div className="bar"></div>
+                       <div className="bar"></div>
+                       <div className="bar"></div>
+                     </div>
+                     <div className="sidebar-logo">
+                      
+                     </div>
+                   </div>
+                   <ul className="sidebar-menu" ref={userSideRef}>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">My recipes</a></li>
+                     <li><a href="#">Saved recipes</a></li>
+                     <li><a href="#">Meal planner</a></li>
+                   </ul>
+                   
+                 </div>
+               </div>
+
+
+
+
+               <form className="d-flex" role="search">
+                 <input className="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search"/>
+                 <button type="button" className="btn btn-outline-danger search-button" >Search</button>
+                 <div className="small">
+                   <i className="fa-solid fa-user fa-xl" ></i>
+                 </div>
+               </form>
+             </div>
+         </nav>
+       </div>
       )}
       {!user && (
         <nav className={NavCSS['navbar']} ref={navbarRef}>
@@ -69,13 +96,15 @@ const Navbar = () => {
             <img src={logo} alt='logo'></img>
           </div>
           <ul className={NavCSS['nav-links']} ref={linksRef}>
-            <li>Home</li>
-            <li><a href='#ourFoods'>Our Foods</a></li>
-            <li><NavLink to="/OurStory" className={NavCSS['reactlink']}> Story </NavLink> </li>
+            <li><NavLink to="/pantrypal" activeclassname="selected" className={NavCSS['reactlink']}> Home </NavLink></li>
+            <li ref={foodsRef}>
+                Our Foods
+             </li>
+            <li><NavLink to="/OurStory" activeclassname="selected" className={NavCSS['reactlink']}> Story </NavLink> </li>
             <li className={NavCSS['logo']}><img src={logo} alt='logo'></img></li>
-            <li><NavLink to="/ContactUs" className={NavCSS['reactlink']}>Contact Us</NavLink> </li>
-            <li><NavLink to="/login" className={NavCSS['reactlink']}> Login</NavLink></li>
-            <li><NavLink to="/signup" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
+            <li><NavLink to="/ContactUs" activeclassname="selected" className={NavCSS['reactlink']}>Contact Us</NavLink> </li>
+            <li><NavLink to="/login" activeclassname="selected" className={NavCSS['reactlink']}> Login</NavLink></li>
+            <li><NavLink to="/signup" activeclassname="selected" className={NavCSS['reactlink']}>Sign Up</NavLink> </li>
           </ul>
         </nav>
       )}

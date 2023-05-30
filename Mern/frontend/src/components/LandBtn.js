@@ -32,8 +32,8 @@ const LandingBtnComp = () => {
   return (
     <div>
       <main>
-        <div className={Land['p2']}>
-          <h1 id='#ourFoods'>Choose from a variety of recipes from different parts of the country</h1>
+        <div className={Land['p2']} id='ourFoods'>
+          <h1 >Choose from a variety of recipes from different parts of the country</h1>
 
           <div className={Land['categories']}>
             <button className={`${Land.cat1} ${Land.border}`} onClick={() => handleCategoryClick('luzon')}  id="luzonButton">

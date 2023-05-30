@@ -65,7 +65,8 @@ display: block;
   background-image: url("../images/bg/p2bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  
+  box-sizing: border-box;
+  padding-top: 6vw;
   
   
 }
