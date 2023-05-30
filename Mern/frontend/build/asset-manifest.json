@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cf3b15a9.css",
+    "main.js": "/static/js/main.d9b67fa8.js",
+    "static/media/Group 1.png": "/static/media/Group 1.09fa19495a4e69ead038.png",
+    "static/media/backgroundimg.png": "/static/media/backgroundimg.4ddd3543574f17f2cccb.png",
+    "static/media/p2bg.png": "/static/media/p2bg.3bd7e0b432ed1664724b.png",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/L-dinakdakan.png": "/static/media/L-dinakdakan.65d3d3a060972d836dde.png",
+    "static/media/L-igado.png": "/static/media/L-igado.59b35b3a1f570c822047.png",
+    "static/media/img_2532-1 1.png": "/static/media/img_2532-1 1.68e260547057b04b5f7d.png",
+    "static/media/V-chickeninasal.png": "/static/media/V-chickeninasal.d5d63bd6fd3ed278eaa8.png",
+    "static/media/L-sisig.png": "/static/media/L-sisig.118f915651f403ef811c.png",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/M-tiyula itim.png": "/static/media/M-tiyula itim.7904dc392c3d6004c4c4.png",
+    "static/media/L-pancitbatil.png": "/static/media/L-pancitbatil.f5bee2c88956a123b847.png",
+    "static/media/V-humba.png": "/static/media/V-humba.afcad6969a81bdeaaad0.png",
+    "static/media/V-lapazbatchoy.png": "/static/media/V-lapazbatchoy.2dfa79749a208c6570b8.png",
+    "static/media/M-chicken pyanggang.png": "/static/media/M-chicken pyanggang.56b70c5afda8f7c387f1.png",
+    "static/media/M-rendang.png": "/static/media/M-rendang.19178ae847372320917d.png",
+    "static/media/V-lumpiangubod.png": "/static/media/V-lumpiangubod.84e69ff54dbd4bec65c4.png",
+    "static/media/L-poquipoqui.png": "/static/media/L-poquipoqui.25b1fdcb175f9ec1adc0.png",
+    "static/media/M-beef kulma.png": "/static/media/M-beef kulma.2be6aad30400b12cd87e.png",
+    "static/media/M-kuning.png": "/static/media/M-kuning.73b8c48bc719f60fb6aa.png",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/profileIcon.png": "/static/media/profileIcon.412c757afcd4811af1e0.png",
+    "static/media/logo.png": "/static/media/logo.00264cf958c1644775a1.png",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/index.html",
+    "main.cf3b15a9.css.map": "/static/css/main.cf3b15a9.css.map",
+    "main.d9b67fa8.js.map": "/static/js/main.d9b67fa8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf3b15a9.css",
+    "static/js/main.d9b67fa8.js"
+  ]
+}
