@@ -22,7 +22,7 @@ const Navbar = () => {
     logout();
   };
 
-  const { navbarRef, burgerRef, linksRef,userNavRef, userSideRef} = useNavbarEffect(NavCSS, user);
+  const { navbarRef, burgerRef, linksRef, userNavRef,userSideRef} = useNavbarEffect(NavCSS, user);
    const {foodsRef}=  useScrollToSection(user);
   
   
@@ -40,6 +40,7 @@ const Navbar = () => {
       {user && (
          <div className="col-lg-12 right">
          <nav className="navbaruser"ref={userNavRef}>
+         <NavLink to="/profile" activeclassname="selected" className={NavCSS['reactlink']}> Profile </NavLink>
          <span>{user.email}</span>
           <button onClick={handleClick}>Log out</button>
     

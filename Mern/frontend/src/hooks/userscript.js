@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useAuthContext } from './useAuthContext';
 import { useLocation } from 'react-router-dom';
-const useEffect = (NavCSS, user) => {
+const useEffect = ( user) => {
  const linksRef = useRef(null);
  const userNavRef =useRef(null);
   const userSideRef=useRef(null);
@@ -12,19 +12,13 @@ const useEffect = (NavCSS, user) => {
       const targetElement = event.target;
 
       
-      if (!burger.contains(targetElement)) {
-        links.classList.remove(NavCSS.show);
-        
-      }
-      if (burger.contains(targetElement)) {
-        links.classList.toggle(NavCSS.show);
-      }
+    
       if (!userNav.contains(targetElement)) {
-        userSide.classList.remove(NavCSS.show);
+        userSide.classList.remove(".show");
         
       }
       if (userNav.contains(targetElement)) {
-        userSide.classList.toggle(NavCSS.show);
+        userSide.classList.toggle(".show");
       }
  document.addEventListener('click', handleClick);
  return () => {

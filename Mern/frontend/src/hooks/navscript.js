@@ -39,13 +39,7 @@ const useNavbarEffect = (NavCSS, user) => {
       if (burger.contains(targetElement)) {
         links.classList.toggle(NavCSS.show);
       }
-      if (!userNav.contains(targetElement)) {
-        userSide.classList.remove(NavCSS.show);
-        
-      }
-      if (userNav.contains(targetElement)) {
-        userSide.classList.toggle(NavCSS.show);
-      }
+     
     };
 
     
