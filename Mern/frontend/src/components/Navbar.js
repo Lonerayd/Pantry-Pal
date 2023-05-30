@@ -41,8 +41,8 @@ const Navbar = () => {
       {user && (
          <div className="col-lg-12 right">
           
-         <nav className="navbaruser"ref={userNavRef}>
-         <div className="navbar-toggle">
+         <nav className="navbaruser">
+         <div className="navbar-toggle" ref={userNavRef}>
                    <div className="bar"></div>
                    <div className="bar"></div>
                    <div className="bar"></div>
