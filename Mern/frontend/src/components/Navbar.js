@@ -40,6 +40,7 @@ const Navbar = () => {
       {user && (
          <div className="col-lg-12 right">
          <nav className="navbaruser"ref={userNavRef}>
+         <NavLink to="/" activeclassname="selected" className={NavCSS['reactlink']}> Home </NavLink>
          <NavLink to="/profile" activeclassname="selected" className={NavCSS['reactlink']}> Profile </NavLink>
          <span>{user.email}</span>
           <button onClick={handleClick}>Log out</button>
