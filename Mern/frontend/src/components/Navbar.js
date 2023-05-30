@@ -40,6 +40,9 @@ const Navbar = () => {
       {user && (
          <div className="col-lg-12 right">
          <nav className="navbaruser"ref={userNavRef}>
+         <span>{user.email}</span>
+          <button onClick={handleClick}>Log out</button>
+    
              <div className="container-fluid navs">
              <a className="navbar-brand"></a> 
                <div>
