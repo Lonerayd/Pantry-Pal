@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/recipes/(.*)", "dest": "/routes/recipes.js" },
+      { "src": "/api/user/(.*)", "dest": "/routes/user.js" }
+    ]
+  }
