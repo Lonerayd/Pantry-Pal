@@ -1,5 +1,5 @@
 {
-  "proxy": "https://pantry-pal-backend.onrender.com/",
+  "proxy": "process.env.REACT_APP_BACKEND",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
