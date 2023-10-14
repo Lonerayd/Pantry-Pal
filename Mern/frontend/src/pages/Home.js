@@ -19,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch('/api/recipes', {
+      const response = await fetch('https://pantry-pal-backend.onrender.com/api/recipes', {
         headers: { 'Authorization': `Bearer ${user.token}` },
       });
       const json = await response.json();

@@ -23,7 +23,7 @@ const RecipeForm = () => {
 
     const recipe = { title, ingredients, directions };
 
-    const response = await fetch("/api/recipes", {
+    const response = await fetch("https://pantry-pal-backend.onrender.com/api/recipes", {
       method: "POST",
       body: JSON.stringify(recipe),
       headers: {

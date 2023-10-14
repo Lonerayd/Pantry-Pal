@@ -9,7 +9,7 @@ export const useSignup = () => {
   const signup = async (email, password) => {
     setIsLoading(true)
     setError(null)
-
+// try
     const response = await fetch('https://pantry-pal-backend.onrender.com/api/user/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},

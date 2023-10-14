@@ -14,7 +14,7 @@ const RecipeDetails = ({ recipe }) => {
       return;
     }
 
-    const response = await fetch('/api/recipes/' + recipe._id, {
+    const response = await fetch('https://pantry-pal-backend.onrender.com/api/recipes/' + recipe._id, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`
