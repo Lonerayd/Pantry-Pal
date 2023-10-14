@@ -7,7 +7,8 @@ const userRoutes = require('./routes/user')
 const recipeRoutes = require('./routes/recipes')
 // express app
 const app = express()
-
+//cors
+const cors = require("cors")
 // middleware
 app.use(express.json())
 
@@ -15,6 +16,11 @@ app.use((req, res, next) => {
   console.log(req.path, req.method)
   next()
 })
+app.use(
+  cors({
+    origin: "https://pantry-pal-frontend.onrender.com",
+  })
+)
 
 // routes
 app.use('/api/recipes', recipeRoutes)
