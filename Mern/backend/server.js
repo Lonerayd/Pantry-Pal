@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 })
 app.use(
   cors({
-    origin: "https://pantry-pal-frontend.onrender.com",
+    origin: "http://192.168.55.105:3000", 
   })
 )
 
